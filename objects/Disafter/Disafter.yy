@@ -92,20 +92,32 @@
     "physicsStartAwake": true,
     "properties": [
         {
-            "id": "d8669e70-bace-4286-91cf-a611777143a8",
+            "id": "5bb14fda-6476-4739-ad00-b504e8cc5621",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
-            "listItems": [
-                "\"Item 0\""
-            ],
+            "listItems": null,
             "multiselect": false,
             "rangeEnabled": false,
             "rangeMax": 10,
             "rangeMin": 0,
-            "resourceFilter": 256,
-            "value": "noone",
-            "varName": "variable_name",
-            "varType": 5
+            "resourceFilter": 1023,
+            "value": "false",
+            "varName": "is_grounded",
+            "varType": 3
+        },
+        {
+            "id": "c3295eed-9055-41b0-b342-7a208255b578",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "false",
+            "varName": "is_interruptible",
+            "varType": 3
         }
     ],
     "solid": true,
