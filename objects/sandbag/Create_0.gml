@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 depth = 1;
-hurtbox = hurtbox_create(100,100,-60,-60);
+hurtbox = hurtbox_create(64,64,-32,-32);
 
 hitbox = -1;
 

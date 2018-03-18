@@ -16,7 +16,7 @@ else{ //else if smash_release = true;
 	
 	if(image_index>5){
 		if(hitbox_created == false){
-	hitbox = hitbox_create(16*image_xscale, 32, 6*image_xscale, 32, 8, (charge_timer*.2)*image_xscale, (charge_timer*.4), 15); //3rd to last and 2nd to last xknockback and yknockback
+	hitbox = hitbox_create(32*image_xscale, 16, -16*image_xscale, 32, 8, (charge_timer*.2)*image_xscale, (charge_timer*.4), 15); //3rd to last and 2nd to last xknockback and yknockback
 	hitbox_created = true;}
 	}
 	//show_debug_message("image_index:" + string(image_index));
