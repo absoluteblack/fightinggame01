@@ -28,6 +28,11 @@ if (is_interruptable)
 	
 		fsmash_generic();
 	}
+	if (sprite_index == disafter_nspecial)
+	{
+	
+		nspecial_generic();
+	}
 
 	if (sprite_index == disafter_running)
 	{

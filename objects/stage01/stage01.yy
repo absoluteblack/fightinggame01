@@ -4,7 +4,26 @@
     "mvc": "1.0",
     "name": "stage01",
     "eventList": [
-        
+        {
+            "id": "764cd023-c873-4cc4-b4e3-e4b47f3eb99b",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 3,
+            "m_owner": "7fe73557-7f6a-4de8-94dd-10b5e8117b99"
+        },
+        {
+            "id": "22f6dd81-439a-4dee-b37c-2deb4f08c2d4",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "7fe73557-7f6a-4de8-94dd-10b5e8117b99"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,

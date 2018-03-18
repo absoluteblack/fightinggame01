@@ -1,7 +1,3 @@
-//this is all garbage i th
-
-
-
 if(smash_released == false){
 if (keyboard_check(ord("F")) and (charge_timer <= 60)){
 if(image_index >= 5){image_index=3; }
@@ -35,63 +31,4 @@ else{ //else if smash_release = true;
 	//show_debug_message("charge timer reset");
 	}
 }
-
-
-
-
-
-//if(charge_timer == 36){
-//image_index=5;
-//image_speed=0;
-//}
-
-//if(charge_timer <= 36){
-
-//}
-//else{ 
-//if(charge_timer == 96){ //first check if smash attach reached max 1 second/ 60 frames of charging
-//	//release smash attack
-//	image_index=6;
-//	image_speed=1;
-//	show_debug_message("full charge:" + string(charge_timer));
-//	//use charge timer to scale move damage/knockback
-//	//set charge timer to zero
-//	charge_timer = 0;
-//	show_debug_message("charge timer reset");
-//	sprite_index = disafter_idle;
-//}
-//else if (keyboard_check(ord("F"))){ //if smash attack is not fully charged check if keyboard is down and if so continue charging
-	
-//	image_index=5;
-//	image_speed=0;
-		
-//}
-//else{ //if smash attack is not fully charged, but keyboard is not down, release smash attack with partial charge
-//	//release smash attack
-//	image_index=6;
-//	image_speed=1;
-//	show_debug_message("partial charge:" + string(charge_timer));
-//	//use charge timer to scale move damage/knockback
-	
-//	//set charge timer to zero
-//	charge_timer = 0;
-//	sprite_index = disafter_idle;
-//	show_debug_message("charge timer reset");
-//}
-//}
-	//if(image_index == 6){ image_speed=1;
-	//	show_debug_message("partial charge:" + string(charge_timer));
-	//	charge_timer = 0;
-	//	sprite_index = disafter_idle;}
-		
-	//if(charge_timer == 60){ image_speed=1;
-	//	show_debug_message("full charge:" + string(charge_timer));
-	//	charge_timer = 0;
-	//	sprite_index = disafter_idle;}
-
-//if(image_index == (image_number-1)){
-//show_debug_message("image_index = image number" + string(image_index) + string(image_number));	
-//charge_timer = 0;
-//sprite_index = disafter_idle;
-//}
 

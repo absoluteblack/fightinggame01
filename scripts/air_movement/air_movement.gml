@@ -9,7 +9,7 @@ if (keyboard_check_pressed(ord("W")) and air_jumps > 0)
 
 if (keyboard_check_pressed(ord("F"))){
 	sprite_index = disafter_nair;
-	hitbox = hitbox_create(40*image_xscale, 32, 16*image_xscale, -16, 8, 5*image_xscale, 5, 55); //the are xknockback and yknockback
+	hitbox = hitbox_create(40*image_xscale, 32, 16*image_xscale, -16, 8, 3*image_xscale, 7, 55); //the are xknockback and yknockback
 	
 }
 

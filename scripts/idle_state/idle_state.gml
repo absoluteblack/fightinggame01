@@ -28,3 +28,16 @@ if keyboard_check_pressed(ord("F"))
 	hitbox_created = false;
 	sprite_index = disafter_fsmash;
 }
+
+if keyboard_check_pressed(ord("R"))
+{
+	hit_xStrength = .3;
+	hit_yStrength = 2;
+	hit_existence_frames = 1;
+	frames_between_multihits = 10;
+	move_timer = 0;
+	multihits_released = 0;
+	smash_released = false;
+	hitbox_created = false;
+	sprite_index = disafter_nspecial;
+}
