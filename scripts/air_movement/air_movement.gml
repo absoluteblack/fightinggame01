@@ -10,6 +10,7 @@ if (keyboard_check_pressed(ord("W")) and air_jumps > 0)
 if (keyboard_check_pressed(ord("E"))){
 	sprite_index = disafter_nair;
 	hitbox = hitbox_create(40*image_xscale, 32, 16*image_xscale, -16, 8, 5*image_xscale, 8, 55); //the are xknockback and yknockback
+	audio_play_sound(2,1,0);
 	
 }
 

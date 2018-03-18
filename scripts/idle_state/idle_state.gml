@@ -27,6 +27,7 @@ if keyboard_check_pressed(ord("F"))
 	smash_released = false;
 	hitbox_created = false;
 	sprite_index = disafter_fsmash;
+	
 }
 
 if keyboard_check_pressed(ord("R"))
@@ -34,17 +35,19 @@ if keyboard_check_pressed(ord("R"))
 	hit_xStrength = .3;
 	hit_yStrength = 2;
 	hit_existence_frames = 1;
-	frames_between_multihits = 10;
+	frames_between_multihits = 5;
 	move_timer = 0;
 	multihits_released = 0;
 	smash_released = false;
 	hitbox_created = false;
 	sprite_index = disafter_nspecial;
+	audio_play_sound(1,1,0);
 }
 
 if (keyboard_check_pressed(ord("E"))){
 	sprite_index = disafter_jab;
 	move_timer = 0;
 	hitbox_created = false;
+	audio_play_sound(2,1,0);
 	
 }
