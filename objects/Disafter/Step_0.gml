@@ -23,6 +23,11 @@ if (is_interruptable)
 		crouch_state();
 	}
 	
+	if (sprite_index == disafter_jab)
+	{
+		jab_attack();
+	}
+	
 	if (sprite_index == disafter_fsmash)
 	{
 	

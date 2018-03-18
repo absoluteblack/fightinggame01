@@ -33,3 +33,8 @@ if(sprite_index = disafter_nair)
 {
 	sprite_index = disafter_rising;
 }
+
+if(sprite_index = disafter_nair)
+{
+	sprite_index = disafter_idle;
+}

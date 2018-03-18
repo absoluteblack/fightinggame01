@@ -40,3 +40,14 @@ if(hitbox != -1){
 		}
 	}
 }
+
+if(hit){
+if (instance_exists(hitBy)){	
+hsp = hitBy.xHit;
+vsp = hitBy.yHit * -1;
+hitStun = hitBy.hitstun;
+image_xscale = hitBy.owner.image_xscale * -1;
+hit = false;
+//currentState = states.hit
+}
+}

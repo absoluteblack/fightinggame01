@@ -29,3 +29,7 @@ is_interruptable = true;
 hurtbox = hurtbox_create(32,60,-16,-16);
 
 hitbox = -1;
+
+hitBy = -1;
+hitstun = 0;
+hit = false;

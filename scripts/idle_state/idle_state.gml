@@ -41,3 +41,10 @@ if keyboard_check_pressed(ord("R"))
 	hitbox_created = false;
 	sprite_index = disafter_nspecial;
 }
+
+if (keyboard_check_pressed(ord("E"))){
+	sprite_index = disafter_jab;
+	move_timer = 0;
+	hitbox_created = false;
+	
+}

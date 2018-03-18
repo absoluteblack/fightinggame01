@@ -9,14 +9,12 @@ y = other.y + yOffset;
 
 
 if(hit){
-show_debug_message(hsp);
-hsp += hitBy.xHit;
-show_debug_message(hitBy.xHit);
-show_debug_message(hsp);
-vsp -= hitBy.yHit;
+if (instance_exists(hitBy)){	
+hsp = hitBy.xHit;
+vsp = hitBy.yHit * -1;
 hitStun = hitBy.hitstun;
 image_xscale = hitBy.owner.image_xscale * -1;
 hit = false;
 //currentState = states.hit
-
+}
 }

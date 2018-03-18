@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-
+depth = 1;
 hurtbox = hurtbox_create(100,100,-60,-60);
 
 hitbox = -1;

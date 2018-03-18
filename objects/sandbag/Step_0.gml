@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+
+
 if (place_meeting(round(x+hsp), round(y), stage01))
 {
 	while (!place_meeting(round(x+sign(hsp)), round(y), stage01)) 
