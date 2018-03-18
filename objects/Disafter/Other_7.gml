@@ -28,3 +28,8 @@ if (sprite_index = disafter_spawn)
 	is_interruptable = true;
 	grav = max_fall_speed/15;
 }
+
+if(sprite_index = disafter_nair)
+{
+	sprite_index = disafter_rising;
+}

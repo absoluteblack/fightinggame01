@@ -1,0 +1,57 @@
+/// @description Insert description here
+// You can write your code in this editor
+
+if (place_meeting(round(x+hsp), round(y), stage01))
+{
+	while (!place_meeting(round(x+sign(hsp)), round(y), stage01)) 
+	{
+		x += sign(hsp);
+	}
+	hsp = 0;
+}
+x += hsp;
+
+if (place_meeting(round(x), round(y+vsp), stage01))
+{
+	while (!place_meeting(round(x), round(y+sign(vsp)), stage01)) 
+	{
+		y += sign(vsp); 
+	}
+	vsp = 0;
+	// Collision with stage
+	
+}
+y += vsp;
+
+
+
+
+
+
+if (is_grounded){
+	if (abs(hsp) > ground_friction)
+	{
+		hsp -= (sign(hsp) * ground_friction);
+	}
+	else
+	{
+		hsp = 0;
+	}
+}
+else
+{
+	if (abs(hsp) > air_friction)
+	{
+		hsp -= (sign(hsp) * air_friction);
+	}
+	else
+	{
+		hsp = 0;
+	}
+}
+
+vsp += grav;
+if (vsp > max_fall_speed)
+{
+	vsp = max_fall_speed;
+}

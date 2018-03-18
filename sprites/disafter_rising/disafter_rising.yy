@@ -9,31 +9,31 @@
     "bbox_bottom": 95,
     "bbox_left": 39,
     "bbox_right": 79,
-    "bbox_top": 22,
+    "bbox_top": 25,
     "bboxmode": 0,
     "colkind": 1,
     "coltolerance": 0,
     "edgeFiltering": false,
     "frames": [
         {
-            "id": "ae45d6ef-8fec-4aba-94a6-f603b2b3d7e2",
+            "id": "3120866c-a1cc-44a6-bf77-393769afc132",
             "modelName": "GMSpriteFrame",
             "mvc": "1.0",
             "SpriteId": "0007344e-af6c-458c-b2b1-33b6f04407df",
             "compositeImage": {
-                "id": "943af6d3-eb05-413e-9ed5-5a1a9f1fb93e",
+                "id": "94e5178d-880c-4642-b4ff-431a56966a42",
                 "modelName": "GMSpriteImage",
                 "mvc": "1.0",
-                "FrameId": "ae45d6ef-8fec-4aba-94a6-f603b2b3d7e2",
+                "FrameId": "3120866c-a1cc-44a6-bf77-393769afc132",
                 "LayerId": "00000000-0000-0000-0000-000000000000"
             },
             "images": [
                 {
-                    "id": "feb65837-53b0-4ecf-81cb-e12dd6a34de8",
+                    "id": "0e20976c-3aff-4125-9a65-86b0100ed9ba",
                     "modelName": "GMSpriteImage",
                     "mvc": "1.0",
-                    "FrameId": "ae45d6ef-8fec-4aba-94a6-f603b2b3d7e2",
-                    "LayerId": "ef3db403-e924-4155-8892-32b6e64afaa7"
+                    "FrameId": "3120866c-a1cc-44a6-bf77-393769afc132",
+                    "LayerId": "6415ece8-5036-4e8e-bf66-dee7debce388"
                 }
             ]
         }
@@ -43,7 +43,7 @@
     "height": 96,
     "layers": [
         {
-            "id": "ef3db403-e924-4155-8892-32b6e64afaa7",
+            "id": "6415ece8-5036-4e8e-bf66-dee7debce388",
             "modelName": "GMImageLayer",
             "mvc": "1.0",
             "SpriteId": "0007344e-af6c-458c-b2b1-33b6f04407df",
@@ -56,7 +56,7 @@
     ],
     "origin": 4,
     "originLocked": false,
-    "playbackSpeed": 15,
+    "playbackSpeed": 12,
     "playbackSpeedType": 0,
     "premultiplyAlpha": false,
     "sepmasks": false,

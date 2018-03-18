@@ -12,6 +12,17 @@ if (is_interruptable)
 	{
 		idle_state();
 	}
+	
+	if (sprite_index == disafter_crouch)
+	{
+		crouch_state();
+	}
+	
+	if (sprite_index == disafter_fsmash)
+	{
+	
+		fsmash_generic();
+	}
 
 	if (sprite_index == disafter_running)
 	{
@@ -48,6 +59,10 @@ else
 	if ((sprite_index == disafter_rising) or (sprite_index == disafter_falling) or (sprite_index == disafter_jump))
 	{
 		air_movement();	
+	}
+	else if (sprite_index == disafter_nair)
+	{
+		air_attacks();	
 	}
 }
 

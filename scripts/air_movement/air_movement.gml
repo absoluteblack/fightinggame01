@@ -3,8 +3,16 @@ if (keyboard_check_pressed(ord("W")) and air_jumps > 0)
 {
 	vsp = -air_jump_velocity;
 	air_jumps -= 1;
-	hsp += sign(hsp) * min(4, abs(hsp));
+	sprite_index = disafter_rising;
+	//hsp += sign(hsp) * min(2, abs(hsp));
 }
+
+if (keyboard_check_pressed(ord("F"))){
+	sprite_index = disafter_nair;
+	hitbox = hitbox_create(40*image_xscale, 32, 16*image_xscale, -16, 8, 5*image_xscale, 5, 55); //the are xknockback and yknockback
+	
+}
+
 
 if (keyboard_check(ord("A")))
 {
