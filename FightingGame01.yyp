@@ -487,6 +487,14 @@
             }
         },
         {
+            "Key": "ebefd4dc-cf5c-4888-a2ce-1c0d476f3166",
+            "Value": {
+                "id": "9c3eaa3f-8a27-4446-92b6-9396d0f7fbf3",
+                "resourcePath": "sprites\\disafter_dsmash\\disafter_dsmash.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "f0578a0f-577a-4266-87b1-c85b8b08b440",
             "Value": {
                 "id": "0d311c82-742e-4ac9-937d-82f6f9bde989",
@@ -524,6 +532,14 @@
                 "id": "14ca2181-e55d-4eb4-8e48-4a000f24e79a",
                 "resourcePath": "views\\f783f27e-1491-4737-8f22-68cb6e7d72d8.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "f8ad4145-a0ea-44b2-aca4-be625b95b2d8",
+            "Value": {
+                "id": "340de0c4-e684-4ee8-acf4-076068d30c43",
+                "resourcePath": "scripts\\dsmash_generic\\dsmash_generic.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -568,7 +584,8 @@
         "1ae0de59-d231-44fb-8a01-13e00ef7fc7c",
         "ff5483a4-05bf-4336-ae52-5574b7330374",
         "0188fa9f-7641-416c-a9e1-0fb4e45f8e74",
-        "b34fff10-1877-410c-8270-462f11b8fa16"
+        "b34fff10-1877-410c-8270-462f11b8fa16",
+        "f8ad4145-a0ea-44b2-aca4-be625b95b2d8"
     ],
     "tutorial": ""
 }

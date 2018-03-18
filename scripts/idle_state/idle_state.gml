@@ -29,6 +29,14 @@ if keyboard_check_pressed(ord("F"))
 	sprite_index = disafter_fsmash;
 	
 }
+if keyboard_check_pressed(ord("V"))
+{
+	charge_timer = 0;
+	smash_released = false;
+	hitbox_created = false;
+	sprite_index = disafter_dsmash;
+	
+}
 
 if keyboard_check_pressed(ord("R"))
 {
