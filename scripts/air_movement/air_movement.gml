@@ -32,7 +32,7 @@ else
 	{
 		if (image_xscale == -1)
 		{
-			hsp += (.5 * air_accel);
+			hsp += (.75 * air_accel);
 		}
 		else
 		{

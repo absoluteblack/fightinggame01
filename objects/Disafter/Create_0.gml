@@ -1,6 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+
+
+
 vsp = 0;
 hsp = 0;
 
@@ -18,7 +21,7 @@ run_accel = max_run_speed/8 + ground_friction;
 
 air_friction = ground_friction * 1.2;
 air_max_speed = max_run_speed;
-air_accel = 2 + run_accel / 2 + air_friction;
+air_accel = run_accel / 2 + air_friction;
 
 is_grounded = false;
 is_interruptable = true;
