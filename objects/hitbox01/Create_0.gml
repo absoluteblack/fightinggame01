@@ -3,6 +3,7 @@
 
 image_alpha = 0;
 owner = -1;
+depth = -5;
 xOffset = 0;
 yOffset = 0;
 life = 0; //how long is this alive

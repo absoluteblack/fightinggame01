@@ -18,7 +18,7 @@
 if(image_index>4 and multihits_released == 0){
 	
 	instance_create_depth(x + 52*image_xscale,y,-5,disafter_eball01);
-	hitbox = hitbox_create(32, 32, 44*image_xscale, -16, 8, hit_xStrength*image_xscale, hit_yStrength, hit_existence_frames); //3rd to last and 2nd to last xknockback and yknockback
+	hitbox = hitbox_create(32, 32, 40*image_xscale, -12, 8, hit_xStrength*image_xscale, hit_yStrength, hit_existence_frames); //3rd to last and 2nd to last xknockback and yknockback
 	multihits_released = 1;
 	if(image_index >= image_number-1){
 	image_index = 0;
@@ -32,7 +32,7 @@ else if(multihits_released = 1){
 	}
 	else
 	{
-		hitbox = hitbox_create(32, 32, 44*image_xscale, -16, 8, hit_xStrength*image_xscale, hit_yStrength, hit_existence_frames); //3rd to last and 2nd to last xknockback and yknockback
+		hitbox = hitbox_create(32, 32, 40*image_xscale, -12, 8, hit_xStrength*image_xscale, hit_yStrength, hit_existence_frames); //3rd to last and 2nd to last xknockback and yknockback
 		multihits_released = 2;
 		move_timer = 0;
 	}	
@@ -43,7 +43,7 @@ if(move_timer < frames_between_multihits){
 	}
 	else
 	{
-		hitbox = hitbox_create(32, 32, 44*image_xscale, -16, 8, hit_xStrength*image_xscale, hit_yStrength, hit_existence_frames); //3rd to last and 2nd to last xknockback and yknockback
+		hitbox = hitbox_create(32, 32, 40*image_xscale, -12, 8, hit_xStrength*image_xscale, hit_yStrength, hit_existence_frames); //3rd to last and 2nd to last xknockback and yknockback
 		multihits_released = 3;
 		move_timer = 0;
 	}	
@@ -54,7 +54,7 @@ if(move_timer < frames_between_multihits){
 	}
 	else
 	{
-		hitbox = hitbox_create(32, 32, 44*image_xscale, -16, 8, hit_xStrength*image_xscale*4, hit_yStrength*2, hit_existence_frames); //3rd to last and 2nd to last xknockback and yknockback
+		hitbox = hitbox_create(32, 32, 40*image_xscale, -12, 8, hit_xStrength*image_xscale*4, hit_yStrength*2, hit_existence_frames); //3rd to last and 2nd to last xknockback and yknockback
 		multihits_released = 4;
 		move_timer = 0;
 	}	
