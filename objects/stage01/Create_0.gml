@@ -3,3 +3,4 @@
 
 stage_create();
 
+declare_states_list();

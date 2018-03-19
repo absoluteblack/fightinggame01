@@ -1,7 +1,17 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-
+if(global.sandbag_on == false){
+x = 2000;
+y = 2000;
+hsp = 0;
+vsp = 0;
+}
+else{
+if(keyboard_check_pressed(ord("C"))){
+x = 480;
+y = 360;
+}
 
 if (place_meeting(round(x+hsp), round(y), stage01))
 {
@@ -56,4 +66,5 @@ vsp += grav;
 if (vsp > max_fall_speed)
 {
 	vsp = max_fall_speed;
+}
 }

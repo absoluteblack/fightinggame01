@@ -26,3 +26,32 @@ if(keyboard_check_pressed(ord("X"))){
 	}
 	
 }
+
+if(keyboard_check_pressed(ord("C"))){
+	
+	if(global.sandbag_on = true)
+	{
+		global.sandbag_on = false;
+	}
+	else
+	{
+		global.sandbag_on = true;
+	}
+	
+}
+
+
+
+if(keyboard_check_pressed(ord("P"))){
+	
+	 
+	  if window_get_fullscreen()
+      {
+      window_set_fullscreen(false);
+      }
+	  else
+      {
+      window_set_fullscreen(true);
+      }
+	
+}

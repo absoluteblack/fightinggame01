@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 
-
+character = "Disafter";
 
 vsp = 0;
 hsp = 0;

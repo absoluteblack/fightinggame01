@@ -1,5 +1,6 @@
 global.dev_mode = false;
 global.slow_mode = false;
+global.sandbag_on = false;
 
 global.stageleftwall = bbox_left;
 global.stagerightwall = bbox_right;
