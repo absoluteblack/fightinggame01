@@ -8,6 +8,8 @@ if (place_meeting(round(x+hsp), round(y), stage01))
 }
 x += hsp;
 
+
+
 if (place_meeting(round(x), round(y+vsp), stage01))
 {
 	while (!place_meeting(round(x), round(y+sign(vsp)), stage01)) 
@@ -17,5 +19,5 @@ if (place_meeting(round(x), round(y+vsp), stage01))
 	vsp = 0;
 	// Collision with stage
 	landing();
-}
+	}
 y += vsp;

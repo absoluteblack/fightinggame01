@@ -5,6 +5,11 @@ if (keyboard_check_pressed(ord("W")) and air_jumps > 0)
 	air_jumps -= 1;
 	sprite_index = disafter_rising;
 	//hsp += sign(hsp) * min(2, abs(hsp));
+	
+	show_debug_message("bbox_top: " + string(bbox_top));
+	show_debug_message("bbox_bot: " + string(bbox_bottom));
+	show_debug_message("bbox_left: " + string(bbox_left));
+	show_debug_message("bbox_right: " + string(bbox_right));
 }
 
 if (keyboard_check_pressed(ord("E"))){

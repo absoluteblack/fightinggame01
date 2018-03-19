@@ -1,5 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
+if(eball != -1){
+with(eball){
+x = other.x + xOffset;
+y = other.y + yOffset;
+}
+}
 
 with(hurtbox){
 x = other.x + xOffset;
@@ -47,6 +53,7 @@ hsp = hitBy.xHit;
 vsp = hitBy.yHit * -1;
 hitStun = hitBy.hitstun;
 image_xscale = hitBy.owner.image_xscale * -1;
+show_debug_message("disafter xscale: " + string(hitBy.owner.image_xscale));
 hit = false;
 //currentState = states.hit
 }

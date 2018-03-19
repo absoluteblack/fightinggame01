@@ -503,6 +503,14 @@
             }
         },
         {
+            "Key": "f2ad10bf-1efb-4be5-b074-a79cb12233ee",
+            "Value": {
+                "id": "2007c894-4855-45c8-87f4-184035fb46a3",
+                "resourcePath": "scripts\\eball_create\\eball_create.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "f418569b-3bdd-4706-a0e4-364317f54032",
             "Value": {
                 "id": "b6f9f0f4-2a28-4ae3-9974-34326cd2ae85",
@@ -585,7 +593,8 @@
         "ff5483a4-05bf-4336-ae52-5574b7330374",
         "0188fa9f-7641-416c-a9e1-0fb4e45f8e74",
         "b34fff10-1877-410c-8270-462f11b8fa16",
-        "f8ad4145-a0ea-44b2-aca4-be625b95b2d8"
+        "f8ad4145-a0ea-44b2-aca4-be625b95b2d8",
+        "f2ad10bf-1efb-4be5-b074-a79cb12233ee"
     ],
     "tutorial": ""
 }

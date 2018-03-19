@@ -59,3 +59,9 @@ if (keyboard_check_pressed(ord("E"))){
 	audio_play_sound(2,1,0);
 	
 }
+
+if(vsp > 0){
+	sprite_index = disafter_rising;
+	is_grounded = false;
+	
+}
