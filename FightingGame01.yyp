@@ -167,11 +167,27 @@
             }
         },
         {
+            "Key": "4879ce2b-40bf-4fdf-a2b3-ce879d311b84",
+            "Value": {
+                "id": "2f2adaff-791c-41a2-ac33-2ca66beb98d7",
+                "resourcePath": "sprites\\number2_fair\\number2_fair.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "4f05c49d-9dd3-4d99-8c1d-abe6ab6249b0",
             "Value": {
                 "id": "423ad76e-3ed0-47e2-bafa-fbd46de04daf",
                 "resourcePath": "scripts\\disafter_animations\\disafter_animations.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "4ff41fc9-b3ca-41c9-8c6d-707867959c5d",
+            "Value": {
+                "id": "cf57c5a1-4a2b-4030-9ec9-8356e3f8a5d4",
+                "resourcePath": "sprites\\number2_uair\\number2_uair.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -252,6 +268,14 @@
                 "id": "776a478e-a446-4ce0-bdad-fd12c8ecb3b9",
                 "resourcePath": "scripts\\landing\\landing.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "68af9d1c-84a4-4df9-a3d0-108f46513582",
+            "Value": {
+                "id": "39cb82fb-f8e8-4b3e-9223-9b02daa8680a",
+                "resourcePath": "sprites\\number2_dtilt\\number2_dtilt.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -431,6 +455,14 @@
             }
         },
         {
+            "Key": "b18a3004-dd4d-48d0-a21d-46041fda698c",
+            "Value": {
+                "id": "8070e050-634d-48e8-8e5a-e89311f2718b",
+                "resourcePath": "sprites\\number2_utilt\\number2_utilt.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "b2069b74-f80b-4c84-ad4b-2b4467880848",
             "Value": {
                 "id": "adab35ec-20fc-4b58-9a73-22856c72320d",
@@ -523,6 +555,14 @@
             "Value": {
                 "id": "a932530b-1cc6-440e-9d46-d8a8f1e0b001",
                 "resourcePath": "sprites\\disafter_eball1\\disafter_eball1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "d53a5f6f-b747-409f-a4b0-711514390ce1",
+            "Value": {
+                "id": "e1ae2f84-43bb-4bd4-86ce-3cbe4ae3451d",
+                "resourcePath": "sprites\\number2_usmash\\number2_usmash.yy",
                 "resourceType": "GMSprite"
             }
         },
