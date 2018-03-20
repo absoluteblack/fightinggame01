@@ -1,12 +1,13 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-
+timre = 0;
 /////////////
 //Character Strings:
 //           Disafter
 //           Number2
 character = "Number2"; //later on, feed which character is selected for player02 here
+slot = 1;
 
 state = states.idle;
 

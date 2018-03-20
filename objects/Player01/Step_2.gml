@@ -26,7 +26,7 @@ if(hitbox != -1){
 				with(other){
 					//check to see if your target is on the ignore list
 					//if it is on the ignore list, dont hit it again
-					for(i = 0; 1 < ds_list_size(ignoreList); i ++){
+					for(i = 0; 1 < ds_list_size(ignoreList); i++){
 						if(ignoreList[|i] = other.owner){
 							ignore = true;
 							show_debug_message("ignore hit detected");
@@ -38,8 +38,8 @@ if(hitbox != -1){
 					if(!ignore){
 						other.owner.hit = true;
 						other.owner.hitBy = id;
-						show_debug_message("first hit detected");
-						ds_list_add(ignore,other.owner);
+						show_debug_message(string(other.owner.timre) + "first hit detected");
+						ds_list_add(ignoreList, other.owner);
 					}
 				}
 			}
@@ -66,3 +66,4 @@ hit = false;
 //currentState = states.hit
 }
 }
+timre++;

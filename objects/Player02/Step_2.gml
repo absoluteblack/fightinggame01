@@ -67,3 +67,5 @@ hit = false;
 //currentState = states.hit
 }
 }
+
+timre++;

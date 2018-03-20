@@ -15,16 +15,7 @@ bkey_pressed = keyboard_check_pressed(vk_subtract);
 bkey_down = keyboard_check(vk_subtract);
 
 
-if(keyboard_check_pressed(ord("K"))){
-	character = "Disafter";
-	sprite_index = disafter_idle;
-	state = states.idle;
-	}
-else if(keyboard_check_pressed(ord("L"))){
-	character = "Number2";
-	sprite_index = number2_idle;
-	state = states.idle;
-	}
+
 	
 	
 if (character == "Disafter"){
@@ -127,7 +118,7 @@ collide_and_move();
 
 if(character == "Number2"){
 	number2_animations();
-}
+
 if (is_interruptable)
 {
 	if (state == states.rising and vsp > 0)
@@ -216,7 +207,5 @@ if (vsp > max_fall_speed)
 
 
 collide_and_move();
-
-if(character == "Number2"){
-	number2_animations();
+number2_animations();
 }

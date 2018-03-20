@@ -3,7 +3,7 @@
 
 depth = 1;
 image_xscale = -1;
-
+timre = 1;
 hurtbox = hurtbox_create(64,64,-32,-32);
 
 hitbox = -1;

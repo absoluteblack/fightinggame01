@@ -1,28 +1,42 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-upkey_pressed = keyboard_check_pressed(vk_up);
-upkey_down = keyboard_check(vk_up);
-leftkey_pressed = keyboard_check_pressed(vk_left);
-leftkey_down = keyboard_check(vk_left);
-rightkey_pressed = keyboard_check_pressed(vk_right);
-rightkey_down = keyboard_check(vk_right);
-downkey_pressed = keyboard_check_pressed(vk_down);
-downkey_down = keyboard_check(vk_down);
-akey_pressed = keyboard_check_pressed(vk_add);
-akey_down = keyboard_check(vk_add);
-bkey_pressed = keyboard_check_pressed(vk_subtract);
-bkey_down = keyboard_check(vk_subtract);
-
-
-
+if (!keyboard_controls)
+{
+	p1_presses = detect_gamepad_presses(slot, axislh_value, axislv_value);
+	lh_pressed = p1_presses[0];
+	lv_pressed = p1_presses[1];
+	axislh_value = gamepad_axis_value(slot, gp_axislh);
+	axislv_value = gamepad_axis_value(slot, gp_axislv);
+	upkey_pressed = gamepad_axis_value(slot, gp_axislv) < -0.5 and lv_pressed == true;
+	upkey_down = gamepad_axis_value(slot, gp_axislv) < -0.5;
+	leftkey_pressed = gamepad_axis_value(slot, gp_axislh) < -0.5 and lv_pressed == true;
+	leftkey_down = gamepad_axis_value(slot, gp_axislh) < -0.5;
+	rightkey_pressed = gamepad_axis_value(slot, gp_axislh) > 0.5 and lv_pressed == true;
+	rightkey_down = gamepad_axis_value(slot, gp_axislh) > 0.5;
+	downkey_pressed = gamepad_axis_value(slot, gp_axislv) > 0.5 and lv_pressed == true;
+	downkey_down = gamepad_axis_value(slot, gp_axislv) > 0.5;
+	akey_pressed = gamepad_button_check_pressed(slot, gp_face1);
+	akey_down = gamepad_button_check(slot, gp_face1);
+	bkey_pressed = gamepad_button_check_pressed(slot, gp_face3);
+	bkey_down = gamepad_button_check(slot, gp_face3);
+}
+else
+{
+	upkey_pressed = keyboard_check_pressed(vk_up);
+	upkey_down = keyboard_check(vk_up);
+	leftkey_pressed = keyboard_check_pressed(vk_left);
+	leftkey_down = keyboard_check(vk_left);
+	rightkey_pressed = keyboard_check_pressed(vk_right);
+	rightkey_down = keyboard_check(vk_right);
+	downkey_pressed = keyboard_check_pressed(vk_down);
+	downkey_down = keyboard_check(vk_down);
+	akey_pressed = keyboard_check_pressed(vk_add);
+	akey_down = keyboard_check(vk_add);
+	bkey_pressed = keyboard_check_pressed(vk_subtract);
+	bkey_down = keyboard_check(vk_subtract);
+}
 /////////////
-if(keyboard_check_pressed(ord("T"))){
-	character = "Disafter";}
-else if(keyboard_check_pressed(ord("Y"))){
-	character = "Number2";}
-
-
 
 if (character == "Disafter"){
 

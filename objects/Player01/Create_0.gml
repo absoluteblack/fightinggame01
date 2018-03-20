@@ -1,13 +1,19 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+timre = 0;
 
 /////////////
 //Character Strings:
 //Disafter
 //Number2
 
-character = "Disafter"; //later on, feed which character is selected for player02 here
+character = "Number2"; //later on, feed which character is selected for player02 here
+slot = 0;
+keyboard_controls = not gamepad_is_connected(slot);
+
+
+axislh_value = 0;
+axislv_value = 0;
 
 state = states.idle;
 
