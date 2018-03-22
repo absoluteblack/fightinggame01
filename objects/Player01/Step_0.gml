@@ -70,6 +70,10 @@ if (is_interruptable)
 	{
 		crouch_state();
 	}
+	if (state == states.shield)
+	{
+		shielding();
+	}
 	
 	if (state == states.jab)
 	{

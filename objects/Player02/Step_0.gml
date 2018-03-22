@@ -23,7 +23,18 @@ if (!keyboard_controls) //use gamepad controls
 	xkey_down = gamepad_button_check(slot, gp_face2); 
 	ykey_pressed = gamepad_button_check_pressed(slot, gp_face4);if(ykey_pressed){show_debug_message("Y: gpface4 - P2");}
 	ykey_down = gamepad_button_check(slot, gp_face4);
-	
+	r1key_pressed = 0;
+	r1key_down = 0;
+	r2key_pressed = 0;
+	r2key_down = 0;
+	l1key_pressed = 0;
+	l1key_down = 0;
+	l2key_pressed = 0;
+	l2key_down = 0;
+	xkey_pressed = 0;
+xkey_down = 0;
+ykey_pressed = 0;
+ykey_down = 0;
 }
 else //else use only keyboard controls like a dingus
 {
@@ -43,6 +54,14 @@ xkey_pressed = 0;
 xkey_down = 0;
 ykey_pressed = 0;
 ykey_down = 0;
+r1key_pressed = 0;
+	r1key_down = 0;
+	r2key_pressed = 0;
+	r2key_down = 0;
+	l1key_pressed = 0;
+	l1key_down = 0;
+	l2key_pressed = 0;
+	l2key_down = 0;
 }
 
 

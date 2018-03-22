@@ -20,6 +20,11 @@ if (downkey_down)
 	state = states.crouch;
 }
 
+if (r2key_pressed or l2key_pressed) //doing pressed instead of down because will check for down each frame in shield script 
+{
+	state = states.shield;
+}
+
 if (akey_pressed){
 	state = states.jab;
 	move_timer = 0;

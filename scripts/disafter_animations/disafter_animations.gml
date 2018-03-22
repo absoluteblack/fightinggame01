@@ -17,6 +17,10 @@ else if(state == states.crouch && !(sprite_index == disafter_crouch))
 {
 sprite_index = disafter_crouch;
 }
+else if(state == states.shield && !(sprite_index == disafter_shield))
+{
+sprite_index = disafter_shield;
+}
 else if(state == states.skid && !(sprite_index == disafter_skid))
 {
 sprite_index = disafter_skid;
