@@ -32,5 +32,5 @@ hitbox = -1;
 eball = -1;
 
 hitBy = -1;
-hitstun = 0;
+
 hit = false;

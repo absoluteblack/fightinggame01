@@ -54,7 +54,12 @@ else //else use only keyboard controls like a dingus
 if(character == "Number2"){number2_animations();}
 else if(character == "Disafter"){disafter_animations();}
 
-if (is_interruptable)
+if(hitStun > 0){
+
+state = states.hitstun
+hitstun_state();
+}
+else if (is_interruptable)
 {
 	if (state == states.rising and vsp > 0)
 	{

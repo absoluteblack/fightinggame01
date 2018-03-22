@@ -13,13 +13,26 @@ x = 480;
 y = 360;
 }
 
-
+if(state == states.running){
 hsp = 1*image_xscale;
+sprite_index = mike_walk;
 if(x < room_width *.3 || x > room_width * .7){
-	image_xscale *= -1;
 	
-	x += 5*image_xscale
+	state = states.nspecial;
+	hitbox_created = false;
+	sprite_index = mike_attack;
 	
+}
+}
+else if(state == states.nspecial){
+
+if(!sprite_index == mike_attack){sprite_index = mike_attack;}
+	if(image_index>2){
+	if(hitbox_created == false){	
+	hitbox = hitbox_create(50*image_xscale, 50, 16*image_xscale, -16, 8, 5*image_xscale, 15, 20);
+	hitbox_created = true;
+	}
+	}
 }
 
 

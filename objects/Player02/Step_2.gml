@@ -29,7 +29,7 @@ if(hitbox != -1){
 					for(i = 0; 1 < ds_list_size(ignoreList); i ++){
 						if(ignoreList[|i] = other.owner){
 							ignore = true;
-							show_debug_message("ignore hit detected");
+							//show_debug_message("ignore hit detected");
 							break;
 						}
 					}
@@ -38,7 +38,7 @@ if(hitbox != -1){
 					if(!ignore){
 						other.owner.hit = true;
 						other.owner.hitBy = id;
-						show_debug_message("first hit detected");
+						//show_debug_message("first hit detected");
 						ds_list_add(ignore,other.owner);
 					}
 				}
