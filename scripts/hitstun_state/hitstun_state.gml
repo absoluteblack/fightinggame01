@@ -1,8 +1,8 @@
 
-if(hitStun > 30){
+if(justHit){
 	image_index=0;
 }
-else if(hitStun > 15){
+else if(hitStun == (hitStun_from_hit - 1)){
 	image_index=1;
 }
 else{

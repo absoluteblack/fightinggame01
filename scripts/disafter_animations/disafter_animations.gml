@@ -4,6 +4,10 @@ sprite_index = disafter_idle;
 else if(state == states.hitstun && !(sprite_index == disafter_hitstun)){
 sprite_index = disafter_hitstun;	
 }
+else if(state == states.dash && !(sprite_index == disafter_dash))
+{
+sprite_index = disafter_dash;
+}
 else if(state == states.running && !(sprite_index == disafter_running))
 {
 sprite_index = disafter_running;

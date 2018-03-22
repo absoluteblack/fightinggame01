@@ -3,15 +3,19 @@ if (upkey_pressed)
 	state = states.jumpsquat;
 }
 	
-if (leftkey_down)
+if (leftkey_pressed)
 {
-	state = states.running;
+	//state = states.running;
+	state = states.dash;
+	dash_frames = dash_length;
 	image_xscale = -1;
 }
 	
-if (rightkey_down)
+if (rightkey_pressed)
 {
-	state = states.running;
+	//state = states.running;
+	state = states.dash;
+	dash_frames = dash_length;
 	image_xscale = 1;
 }
 

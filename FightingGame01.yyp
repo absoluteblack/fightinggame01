@@ -519,6 +519,14 @@
             }
         },
         {
+            "Key": "b896ff3e-ce10-447d-9207-45010b4836f5",
+            "Value": {
+                "id": "20852a20-2ec2-4fda-96b9-0f99628cce8a",
+                "resourcePath": "scripts\\dash_state\\dash_state.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "c3b43521-4395-4f6e-8ed1-67e6d80d4e26",
             "Value": {
                 "id": "2f7a82ad-a06e-4cef-8b82-b65fd93d6ee7",
@@ -808,8 +816,8 @@
         "a9783a02-d6b4-4a78-bac4-d4c6a586f537",
         "5c68361e-3004-40ac-be5d-723697b7acf9",
         "a02c51c5-9b58-44ed-b6c3-9191b149503a",
-        "ff5483a4-05bf-4336-ae52-5574b7330374",
         "992e2de4-0aca-4440-a1e4-af6b3ffa0f25",
+        "ff5483a4-05bf-4336-ae52-5574b7330374",
         "5d436466-0ffc-4d10-bc2d-49abacd3342c",
         "3c59ad4c-0cf7-44fa-9ac6-d38e67b77e9c",
         "c3b43521-4395-4f6e-8ed1-67e6d80d4e26",
@@ -824,7 +832,8 @@
         "f3e3c620-b1fa-4e94-b105-d1a58ea3052d",
         "27797c8d-cad8-4495-8e26-838c460cdb5d",
         "44501a6d-113c-4e8b-8491-4f306f85a48c",
-        "3e6e6837-43f7-49d1-b090-dad74feb51e3"
+        "3e6e6837-43f7-49d1-b090-dad74feb51e3",
+        "b896ff3e-ce10-447d-9207-45010b4836f5"
     ],
     "tutorial": ""
 }

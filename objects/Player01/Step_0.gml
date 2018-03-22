@@ -54,7 +54,7 @@ else //else use only keyboard controls like a dingus
 if(character == "Number2"){number2_animations();}
 else if(character == "Disafter"){disafter_animations();}
 
-if(hitStun > 0){
+if(hitStun >= 1){
 if(state != states.hitstun){
 	justHit = true; 
 	show_debug_message("just hit.");
@@ -74,6 +74,10 @@ else if (is_interruptable)
 	if (state == states.idle)
 	{
 		idle_state();
+	}
+	if (state == states.dash)
+	{
+		dash_state();
 	}
 	
 	if (state == states.crouch)
@@ -114,6 +118,8 @@ else if (is_interruptable)
 
 	if (state == states.skid)
 	{
+		
+		//add code to prevent ability to run in other direction while state = skid
 		idle_state();
 		if (hsp == 0)
 			{

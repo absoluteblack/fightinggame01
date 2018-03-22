@@ -1,3 +1,12 @@
+//Table of Contents:
+//intro
+//jumpsquat
+//nair
+//jab
+
+
+
+
 if(state == states.jumpsquat)
 {
 	is_grounded = false;
@@ -10,13 +19,11 @@ if(state == states.jumpsquat)
 	{
 		vsp = -short_hop_velocity;
 	}
+	if(dash_jump == true){
+	hsp = 2*max_run_speed*image_xscale;
+	dash_jump = false;
+	}
 }
-
-//if(state = states.rising)
-//{
-//	sprite_index = disafter_rising;
-//}
-
 if (state == states.intro)
 {
 	state = states.idle;

@@ -60,10 +60,6 @@ audio_sound_gain(hit_sound, (soundeffect_volume/20), 0);
 hsp = hitBy.xHit;
 vsp = hitBy.yHit * -1;
 hitStun = hitBy.hitstun;
-if(hitStun >= 1){
-state=states.hitstun;
-
-}
 image_xscale = hitBy.owner.image_xscale * -1;
 
 hit = false;

@@ -1,8 +1,8 @@
 {
-    "id": "3e6e6837-43f7-49d1-b090-dad74feb51e3",
+    "id": "b896ff3e-ce10-447d-9207-45010b4836f5",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "hitStun",
+    "name": "dash_state",
     "IsCompatibility": false,
     "IsDnD": false
 }

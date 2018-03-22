@@ -24,13 +24,14 @@ jump_velocity = 12;
 short_hop_velocity = 8;
 air_jump_velocity = 11;
 air_jumps = 1;
-
+dash_frames = 0; //remaining frames left of dash animation
+dash_length = 15; //how many frames their dash lasts
 max_fall_speed = 10;
 grav = max_fall_speed/15;
 
 ground_friction = .15;
 max_run_speed = 6;
-run_accel = max_run_speed/8 + ground_friction;
+run_accel = max_run_speed/15 + ground_friction;
 
 air_friction = ground_friction * 1.2;
 air_max_speed = max_run_speed;
