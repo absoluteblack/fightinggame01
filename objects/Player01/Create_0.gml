@@ -7,7 +7,7 @@ timre = 0;
 //Disafter
 //Number2
 
-character = "Number2"; //later on, feed which character is selected for player02 here
+character = "Disafter"; //later on, feed which character is selected for player02 here
 slot = 0;
 keyboard_controls = not gamepad_is_connected(slot);
 

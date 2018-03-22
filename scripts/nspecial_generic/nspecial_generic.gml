@@ -1,20 +1,3 @@
-//if (keyboard_check(ord("F")) and (charge_timer <= 60)){
-//if(image_index >= 5){image_index=3; }
-
-	
-//	charge_timer += 1;
-//	//show_debug_message("charge:" + string(charge_timer));
-	
-//}
-//else{
-//	smash_released = true; //locks their commitment to release the smash attack (this is important)
-//	}
-//}
-//else{ //else if smash_release = true;
-
-//show_debug_message("charge timer reset");
-
-
 if(image_index>4 and multihits_released == 0){
 	
 	eball = eball_create(56*image_xscale,0,1,1);
@@ -22,7 +5,8 @@ if(image_index>4 and multihits_released == 0){
 	multihits_released = 1;
 	if(image_index >= image_number-1){
 	image_index = 0;
-	sprite_index = disafter_idle;
+	state = states.idle;
+	if(character == "Disafter"){sprite_index = disafter_idle;}
 	
 	}
 }
@@ -61,6 +45,6 @@ if(move_timer < frames_between_multihits){
 }
 else if(image_index > 10){
 	image_index = 0;
-	sprite_index = disafter_idle;	
+	state = states.idle;
+	if(character == "Disafter"){sprite_index = disafter_idle;}	
 }
-

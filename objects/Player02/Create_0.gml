@@ -6,8 +6,9 @@ timre = 0;
 //Character Strings:
 //           Disafter
 //           Number2
-character = "Number2"; //later on, feed which character is selected for player02 here
-slot = 1;
+character = "Disafter"; //later on, feed which character is selected for player02 here
+slot = 1; //first player uses slot 0, second player uses slot 1, etc.
+keyboard_controls = not gamepad_is_connected(slot);
 
 state = states.idle;
 
@@ -41,3 +42,4 @@ eball = -1;
 hitBy = -1;
 hitstun = 0;
 hit = false;
+

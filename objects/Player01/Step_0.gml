@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if (!keyboard_controls)
+if (!keyboard_controls) //use gamepad controls
 {
 	p1_presses = detect_gamepad_presses(slot, axislh_value, axislv_value);
 	lh_pressed = p1_presses[0];
@@ -16,12 +16,25 @@ if (!keyboard_controls)
 	rightkey_down = gamepad_axis_value(slot, gp_axislh) > 0.5;
 	downkey_pressed = gamepad_axis_value(slot, gp_axislv) > 0.5 and lv_pressed == true;
 	downkey_down = gamepad_axis_value(slot, gp_axislv) > 0.5;
-	akey_pressed = gamepad_button_check_pressed(slot, gp_face1);
+	akey_pressed = gamepad_button_check_pressed(slot, gp_face1);if(akey_pressed){show_debug_message("A: gpface1 - P1");}
 	akey_down = gamepad_button_check(slot, gp_face1);
-	bkey_pressed = gamepad_button_check_pressed(slot, gp_face3);
+	bkey_pressed = gamepad_button_check_pressed(slot, gp_face3);if(bkey_pressed){show_debug_message("B: gpface3 - P1");}
 	bkey_down = gamepad_button_check(slot, gp_face3);
+	xkey_pressed = gamepad_button_check_pressed(slot, gp_face2);if(xkey_pressed){show_debug_message("X: gpface2 - P1");}
+	xkey_down = gamepad_button_check(slot, gp_face2); 
+	ykey_pressed = gamepad_button_check_pressed(slot, gp_face4);if(ykey_pressed){show_debug_message("Y: gpface4 - P1");}
+	ykey_down = gamepad_button_check(slot, gp_face4);//gp_shoulderrb
+	r1key_pressed = gamepad_button_check_pressed(slot, gp_shoulderr); if(r1key_pressed){show_debug_message("R1: gpface1 - P1");}
+	r2key_pressed = gamepad_button_check_pressed(slot, gp_shoulderrb); if(r2key_pressed){show_debug_message("R2: gpface1 - P1");}
+	l1key_pressed = gamepad_button_check_pressed(slot, gp_shoulderl); if(l1key_pressed){show_debug_message("L1: gpface1 - P1");}
+	l2key_pressed = gamepad_button_check_pressed(slot, gp_shoulderlb); if(l2key_pressed){show_debug_message("L2: gpface1 - P1");}
+	r1key_down = gamepad_button_check(slot, gp_shoulderr);
+	r2key_down = gamepad_button_check(slot, gp_shoulderrb);
+	l1key_down = gamepad_button_check(slot, gp_shoulderl);
+	l2key_down = gamepad_button_check(slot, gp_shoulderlb);
+	 
 }
-else
+else //else use only keyboard controls like a dingus
 {
 	upkey_pressed = keyboard_check_pressed(vk_up);
 	upkey_down = keyboard_check(vk_up);
@@ -38,113 +51,8 @@ else
 }
 /////////////
 
-if (character == "Disafter"){
-
-
-
-if (is_interruptable)
-{
-	if (sprite_index == disafter_rising and vsp > 0)
-	{
-		sprite_index = disafter_falling;
-	}
-
-	if (sprite_index == disafter_idle)
-	{
-		idle_state();
-	}
-	
-	if (sprite_index == disafter_crouch)
-	{
-		crouch_state();
-	}
-	
-	if (sprite_index == disafter_jab)
-	{
-		jab_attack();
-	}
-	
-	if (sprite_index == disafter_fsmash)
-	{
-	
-		fsmash_generic();
-	}
-		if (sprite_index == disafter_dsmash)
-	{
-	
-		dsmash_generic();
-	}
-	if (sprite_index == disafter_nspecial)
-	{
-	
-		nspecial_generic();
-	}
-
-	if (sprite_index == disafter_running)
-	{
-		check_turn();
-		running_state();
-	}
-
-	if (sprite_index == disafter_skid)
-	{
-		idle_state();
-		if (hsp == 0)
-			{
-				sprite_index = disafter_idle;
-			}
-		else
-		{
-			apply_friction();
-		}
-	}
-}
-
-// Physics calc
-apply_friction();
-
-if (is_grounded)
-{
-	if (sprite_index == disafter_running)
-	{
-		running_movement();
-	}
-}
-else
-{
-	if ((sprite_index == disafter_rising) or (sprite_index == disafter_falling) or (sprite_index == disafter_jump))
-	{
-		air_movement();	
-	}
-	else if (sprite_index == disafter_nair)
-	{
-		air_attacks();	
-	}
-}
-
-vsp += grav;
-if (vsp > max_fall_speed)
-{
-	vsp = max_fall_speed;
-}
-
-
-collide_and_move();	
-	
-}//endif disafter
-
-
-
-
-
-
-
-
-
-/////////////
-
-if(character == "Number2"){
-	number2_animations();
+if(character == "Number2"){number2_animations();}
+else if(character == "Disafter"){disafter_animations();}
 
 if (is_interruptable)
 {
@@ -235,7 +143,5 @@ if (vsp > max_fall_speed)
 
 collide_and_move();
 
-if(character == "Number2"){
-	number2_animations();
-}
-}
+if(character == "Number2"){number2_animations();}
+else if(character == "Disafter"){disafter_animations();}

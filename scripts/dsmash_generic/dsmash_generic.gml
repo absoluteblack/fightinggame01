@@ -1,5 +1,5 @@
 if(smash_released == false){
-if (keyboard_check(ord("V")) and (charge_timer <= 60)){
+if (bkey_down and (charge_timer <= 60)){
 if(image_index >= 4){image_index=2; }
 
 	
@@ -24,7 +24,9 @@ else{ //else if smash_release = true;
 	//show_debug_message("image_index:" + string(image_index));
 	if(image_index >= image_number-1){
 	image_index = 0;
-	sprite_index = disafter_idle;
+	if(character == "Disafter"){sprite_index = disafter_idle;}
+	state = states.idle
+	image_speed = 1;
 	smash_released = false;
 	
 	charge_timer = 0;

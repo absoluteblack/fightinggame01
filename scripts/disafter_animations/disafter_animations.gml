@@ -33,6 +33,10 @@ else if(state == states.fsmash && !(sprite_index == disafter_fsmash))
 {
 sprite_index = disafter_fsmash;
 }
+else if(state == states.dsmash && !(sprite_index == disafter_dsmash))
+{
+sprite_index = disafter_dsmash;
+}
 else if(state == states.nspecial && !(sprite_index == disafter_nspecial))
 {
 sprite_index = disafter_nspecial;

@@ -3,7 +3,7 @@ enum states {
 idle,
 crouch,
 running,
-foxtrot,
+dash,
 skid,
 jumpsquat,
 rising,
