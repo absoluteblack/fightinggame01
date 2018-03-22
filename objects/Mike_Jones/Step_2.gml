@@ -34,7 +34,7 @@ if(hitbox != -1){
 						other.owner.hit = true;
 						other.owner.hitBy = id;
 						//show_debug_message("first hit detected");
-						ds_list_add(ignore,other.owner);
+						ds_list_add(ignoreList,other.owner);
 					}
 				}
 			}

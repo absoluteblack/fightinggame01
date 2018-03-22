@@ -1,5 +1,16 @@
 
-
+if(hitStun > 30){
+	image_index=0;
+}
+else if(hitStun > 15){
+	image_index=1;
+}
+else{
+	image_index=2;
+}
+justHit = false;
+		
+	
 	
 hitStun -= 1;
 show_debug_message("p1 remaining hitstun: " + string(hitStun));

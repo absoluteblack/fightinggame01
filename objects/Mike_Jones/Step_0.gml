@@ -29,7 +29,7 @@ else if(state == states.nspecial){
 if(!sprite_index == mike_attack){sprite_index = mike_attack;}
 	if(image_index>2){
 	if(hitbox_created == false){	
-	hitbox = hitbox_create(50*image_xscale, 50, 16*image_xscale, -16, 8, 5*image_xscale, 15, 20);
+	hitbox = hitbox_create(50*image_xscale, 50, 16*image_xscale, -16, 8, 5*image_xscale, 20, 40);
 	hitbox_created = true;
 	}
 	}

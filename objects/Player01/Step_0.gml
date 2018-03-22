@@ -55,8 +55,13 @@ if(character == "Number2"){number2_animations();}
 else if(character == "Disafter"){disafter_animations();}
 
 if(hitStun > 0){
-
-state = states.hitstun
+if(state != states.hitstun){
+	justHit = true; 
+	show_debug_message("just hit.");
+	hitStun_from_hit = hitStun;
+	show_debug_message("total hitstun = " + string(hitStun_from_hit));
+	}
+state = states.hitstun;
 hitstun_state();
 }
 else if (is_interruptable)

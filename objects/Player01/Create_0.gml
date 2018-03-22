@@ -11,7 +11,7 @@ character = "Disafter"; //later on, feed which character is selected for player0
 slot = 0;
 keyboard_controls = not gamepad_is_connected(slot);
 
-
+justHit = 0;
 axislh_value = 0;
 axislv_value = 0;
 
@@ -34,7 +34,7 @@ run_accel = max_run_speed/8 + ground_friction;
 
 air_friction = ground_friction * 1.2;
 air_max_speed = max_run_speed;
-air_accel = run_accel / 2 + air_friction;
+air_accel = run_accel / 3 + air_friction;
 
 is_grounded = false;
 is_interruptable = true;
@@ -46,4 +46,5 @@ eball = -1;
 
 hitBy = -1;
 hitStun = 0;
+hitStun_from_hit = 0;
 hit = false;

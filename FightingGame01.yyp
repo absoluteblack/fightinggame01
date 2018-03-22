@@ -671,14 +671,6 @@
             }
         },
         {
-            "Key": "e140ba05-b534-4166-85a5-9da5e0e86ae2",
-            "Value": {
-                "id": "3c11817e-6abb-4987-9567-58b8a63b4be3",
-                "resourcePath": "objects\\Disafter\\Disafter.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "e5908f6d-e8c0-4104-85dc-69ae3ffd9456",
             "Value": {
                 "id": "686904a2-0adb-4eb3-b0ea-04f9bd21662f",
