@@ -60,6 +60,9 @@ audio_sound_gain(hit_sound, (soundeffect_volume/20), 0);
 hsp = hitBy.xHit;
 vsp = hitBy.yHit * -1;
 hitStun = hitBy.hitstun;
+if(hitstun >= 1){
+state=states.hitstun;	
+}
 image_xscale = hitBy.owner.image_xscale * -1;
 show_debug_message("player1 xscale: " + string(hitBy.owner.image_xscale));
 hit = false;

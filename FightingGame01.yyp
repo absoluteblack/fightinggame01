@@ -95,6 +95,14 @@
             }
         },
         {
+            "Key": "1b9053f6-b517-4063-9c34-350b990d60e2",
+            "Value": {
+                "id": "79365d06-ce72-4138-a771-dc1503e2016b",
+                "resourcePath": "sprites\\disafter_hitstun\\disafter_hitstun.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "27797c8d-cad8-4495-8e26-838c460cdb5d",
             "Value": {
                 "id": "90c9eb66-d106-40b2-8aff-ebb3e20cfb97",
@@ -147,6 +155,14 @@
             "Value": {
                 "id": "5d50f357-c845-4d73-9cb3-dbd9c9c23759",
                 "resourcePath": "sprites\\number2_intro\\number2_intro.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "4140cb06-7403-4348-90b9-02ca0733e91d",
+            "Value": {
+                "id": "0a56a313-e510-4087-86fd-924bfcf5ce5e",
+                "resourcePath": "sprites\\mike_attack\\mike_attack.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -362,7 +378,7 @@
             "Key": "98293f72-e17f-4447-b6b6-90801b99e894",
             "Value": {
                 "id": "2da9a334-8f82-4732-8490-9ba8073ba46f",
-                "resourcePath": "objects\\sandbag\\sandbag.yy",
+                "resourcePath": "objects\\Mike_Jones\\Mike_Jones.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -626,7 +642,7 @@
             "Key": "dc52a79d-7236-46f9-832e-be0b63f80e4e",
             "Value": {
                 "id": "4b19fe98-f7bd-4ec2-bdf2-c53a4a101d1d",
-                "resourcePath": "sprites\\sprite15\\sprite15.yy",
+                "resourcePath": "sprites\\mike_walk\\mike_walk.yy",
                 "resourceType": "GMSprite"
             }
         },
