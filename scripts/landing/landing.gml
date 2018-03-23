@@ -3,7 +3,7 @@
 	if (!is_grounded) and (state != states.intro)
 {
 	if(character == "Disafter"){sprite_index = disafter_skid;}
-	state = states.idle;
+	state = states.skid;
 	
 	
 	if (leftkey_pressed)

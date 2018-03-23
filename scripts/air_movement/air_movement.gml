@@ -12,8 +12,15 @@ if ((upkey_pressed) and air_jumps > 0)
 }
 
 if ((akey_pressed)){
-	state = states.nair
-	
+	if(downkey_down){
+		state = states.dair;
+		if(character == "Disafter"){
+		hitbox = hitbox_create(45*image_xscale, 45, -20*image_xscale, 40, 8, 0*image_xscale, 10, 55); //the are xknockback and yknockback
+		audio_play_sound(2,1,0);
+	}
+	}
+else{
+	state = states.nair;
 	if(character == "Disafter"){
 	hitbox = hitbox_create(80*image_xscale, 32, -32*image_xscale, -16, 8, 5*image_xscale, 8, 55); //the are xknockback and yknockback
 	audio_play_sound(2,1,0);
@@ -22,9 +29,8 @@ if ((akey_pressed)){
 	hitbox = hitbox_create(26*image_xscale, 20, 16*image_xscale, -1, 8, 16*image_xscale, 16, 55); //the are xknockback and yknockback
 	audio_play_sound(2,1,0);
 	}
-
-	
-}
+}//end of if downkey down
+}//end of if akey pressed
 
 
 if ((leftkey_down))

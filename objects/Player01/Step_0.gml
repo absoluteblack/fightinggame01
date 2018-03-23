@@ -1,21 +1,23 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+//deadzone and press_values set in create
 if (!keyboard_controls) //use gamepad controls
 {
+	
 	p1_presses = detect_gamepad_presses(slot, axislh_value, axislv_value);
 	lh_pressed = p1_presses[0];
 	lv_pressed = p1_presses[1];
 	axislh_value = gamepad_axis_value(slot, gp_axislh);
 	axislv_value = gamepad_axis_value(slot, gp_axislv);
-	upkey_pressed = gamepad_axis_value(slot, gp_axislv) < -0.5 and lv_pressed == true;
-	upkey_down = gamepad_axis_value(slot, gp_axislv) < -0.5;
-	leftkey_pressed = gamepad_axis_value(slot, gp_axislh) < -0.5 and lv_pressed == true;
-	leftkey_down = gamepad_axis_value(slot, gp_axislh) < -0.5;
-	rightkey_pressed = gamepad_axis_value(slot, gp_axislh) > 0.5 and lv_pressed == true;
-	rightkey_down = gamepad_axis_value(slot, gp_axislh) > 0.5;
-	downkey_pressed = gamepad_axis_value(slot, gp_axislv) > 0.5 and lv_pressed == true;
-	downkey_down = gamepad_axis_value(slot, gp_axislv) > 0.5;
+	upkey_pressed = gamepad_axis_value(slot, gp_axislv) < -ud_press_value and lv_pressed == true;
+	upkey_down = gamepad_axis_value(slot, gp_axislv) < -deadzone;
+	leftkey_pressed = gamepad_axis_value(slot, gp_axislh) < -rl_press_value and lv_pressed == true;
+	leftkey_down = gamepad_axis_value(slot, gp_axislh) < -deadzone;
+	rightkey_pressed = gamepad_axis_value(slot, gp_axislh) > rl_press_value and lv_pressed == true;
+	rightkey_down = gamepad_axis_value(slot, gp_axislh) > deadzone;
+	downkey_pressed = gamepad_axis_value(slot, gp_axislv) > ud_press_value and lv_pressed == true;
+	downkey_down = gamepad_axis_value(slot, gp_axislv) > deadzone;
 	akey_pressed = gamepad_button_check_pressed(slot, gp_face1);if(akey_pressed){show_debug_message("A: gpface1 - P1");}
 	akey_down = gamepad_button_check(slot, gp_face1);
 	bkey_pressed = gamepad_button_check_pressed(slot, gp_face3);if(bkey_pressed){show_debug_message("B: gpface3 - P1");}
@@ -51,8 +53,8 @@ else //else use only keyboard controls like a dingus
 }
 /////////////
 
-if(character == "Number2"){number2_animations();}
-else if(character == "Disafter"){disafter_animations();}
+check_character_animations();
+
 
 if(hitStun >= 1){
 if(state != states.hitstun){
@@ -70,55 +72,50 @@ else if (is_interruptable)
 	{
 		state = states.falling;
 	}
-
-	if (state == states.idle)
+	else if (state == states.idle)
 	{
 		idle_state();
 	}
-	if (state == states.dash)
+	else if (state == states.dash)
 	{
 		dash_state();
 	}
-	
-	if (state == states.crouch)
+	else if (state == states.crouch)
 	{
 		crouch_state();
 	}
-	if (state == states.shield)
+	else if (state == states.shield)
 	{
 		shielding();
 	}
-	
-	if (state == states.jab)
+	else if (state == states.jab)
 	{
 		jab_attack();
 	}
-	
-	if (state == states.fsmash)
+	else if (state == states.ftilt)
+	{
+		ftilt_attack();
+	}
+	else if (state == states.fsmash)
 	{
 	
 		fsmash_generic();
 	}
-		if (state == states.dsmash)
+    else if (state == states.dsmash)
 	{
-	
 		dsmash_generic();
 	}
-	if (state == states.nspecial)
+	else if (state == states.nspecial)
 	{
-	
 		nspecial_generic();
 	}
-
-	if (state == states.running)
+	else if (state == states.running)
 	{
 		check_turn();
 		running_state();
 	}
-
-	if (state == states.skid)
+	else if (state == states.skid)
 	{
-		
 		//add code to prevent ability to run in other direction while state = skid
 		idle_state();
 		if (hsp == 0)
@@ -148,10 +145,11 @@ else
 	{
 		air_movement();	
 	}
-	else if (state == states.nair)
+	else if ((state == states.nair) or (state == states.dair))
 	{
 		air_attacks();	
 	}
+	
 }
 
 vsp += grav;
@@ -163,5 +161,4 @@ if (vsp > max_fall_speed)
 
 collide_and_move();
 
-if(character == "Number2"){number2_animations();}
-else if(character == "Disafter"){disafter_animations();}
+check_character_animations();

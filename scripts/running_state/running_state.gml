@@ -1,4 +1,4 @@
-	if (upkey_pressed)
+	if (upkey_pressed or xkey_pressed or ykey_pressed)
 {
 	state = states.jumpsquat;
 }

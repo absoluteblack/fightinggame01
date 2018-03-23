@@ -1,4 +1,4 @@
-if (upkey_pressed)
+if (upkey_pressed or xkey_pressed or ykey_pressed)
 {
 	state = states.jumpsquat;
 }
@@ -10,12 +10,21 @@ if (leftkey_pressed)
 	dash_frames = dash_length;
 	image_xscale = -1;
 }
-	
-if (rightkey_pressed)
+else if (rightkey_pressed)
 {
 	//state = states.running;
 	state = states.dash;
 	dash_frames = dash_length;
+	image_xscale = 1;
+}
+else if (leftkey_down)
+{
+	state = states.running;
+	image_xscale = -1;
+}
+else if (rightkey_down)
+{
+	state = states.running;
 	image_xscale = 1;
 }
 
@@ -29,33 +38,55 @@ if (r2key_pressed or l2key_pressed) //doing pressed instead of down because will
 	state = states.shield;
 }
 
-if (akey_pressed){
-	state = states.jab;
-	move_timer = 0;
-	hitbox_created = false;
-	audio_play_sound(2,1,0);
-	
-}
 
-if(character == "Disafter"){
-if (xkey_pressed)
+
+if(character == "Disafter"){ //here for when new characters do not have all their moves implemented yet
+if (akey_pressed)
 {
+	if(leftkey_pressed){
+	image_xscale = -1;
 	charge_timer = 0;
 	smash_released = false;
 	hitbox_created = false;
 	state = states.fsmash;
-	
-}
-if (bkey_pressed)
-{
+	}
+	else if(rightkey_pressed){
+	image_xscale = 1;
+	charge_timer = 0;
+	smash_released = false;
+	hitbox_created = false;
+	state = states.fsmash;
+	}
+	else if(downkey_pressed){
 	charge_timer = 0;
 	smash_released = false;
 	hitbox_created = false;
 	state = states.dsmash;
-	
+	}
+	else if(rightkey_down){
+		move_timer = 0;
+		hitbox_created = false;
+		state = states.ftilt;
+		image_xscale = 1;
+		audio_play_sound(2,1,0);
+	}
+	else if(leftkey_down){
+		move_timer = 0;
+		hitbox_created = false;
+		state = states.ftilt;
+		image_xscale = -1;
+		audio_play_sound(2,1,0);
+	}
+	else{
+	state = states.jab;
+	move_timer = 0;
+	hitbox_created = false;
+	audio_play_sound(2,1,0);
+	}
 }
 
-if (ykey_pressed)
+
+if (bkey_pressed)
 {
 	hit_xStrength = .3;
 	hit_yStrength = 2;

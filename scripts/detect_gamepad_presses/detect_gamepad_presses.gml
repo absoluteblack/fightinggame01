@@ -6,11 +6,11 @@ axislv = gamepad_axis_value(_slot, gp_axislv);
 lh_pressed = true;
 lv_pressed = true;
 
-if abs(axislh) > .5 and abs(_gp_axislh) > .5 and sign(axislh) == sign(_gp_axislh)
+if abs(axislh) > deadzone and abs(_gp_axislh) > deadzone and sign(axislh) == sign(_gp_axislh)
 {
 	lh_pressed = false;
 }
-if abs(axislv) > .5 and abs(_gp_axislv) > .5 and sign(axislv) == sign(_gp_axislv)
+if abs(axislv) > deadzone and abs(_gp_axislv) > deadzone and sign(axislv) == sign(_gp_axislv)
 {
 	lv_pressed = false;
 }

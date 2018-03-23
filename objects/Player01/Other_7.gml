@@ -11,7 +11,8 @@ if(state == states.jumpsquat)
 {
 	is_grounded = false;
 	state = states.rising;
-	if (keyboard_check(ord("W")))
+	air_jumps = 1;
+	if (upkey_down or xkey_down or ykey_down)//taking ykey or xkey out of here would allow them to be the designated shorthop key
 	{
 		vsp = -jump_velocity;
 	}
@@ -32,12 +33,12 @@ if (state == states.intro)
 	grav = max_fall_speed/15;
 }
 
-if(state == states.nair)
+if((state == states.nair) or (state == states.dair))
 {
 	state = states.falling;
 }
 
-if(state == states.jab)
+if((state == states.jab) or (state == states.ftilt))
 {
 	state = states.idle;
 	

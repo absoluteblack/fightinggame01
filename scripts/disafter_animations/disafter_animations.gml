@@ -8,6 +8,10 @@ else if(state == states.dash && !(sprite_index == disafter_dash))
 {
 sprite_index = disafter_dash;
 }
+else if(state == states.skid && !(sprite_index == disafter_skid))
+{
+sprite_index = disafter_skid;
+}
 else if(state == states.running && !(sprite_index == disafter_running))
 {
 sprite_index = disafter_running;
@@ -40,6 +44,10 @@ else if(state == states.jab && !(sprite_index == disafter_jab))
 {
 sprite_index = disafter_jab;
 }
+else if(state == states.ftilt && !(sprite_index == disafter_ftilt))
+{
+sprite_index = disafter_ftilt;
+}
 else if(state == states.fsmash && !(sprite_index == disafter_fsmash))
 {
 sprite_index = disafter_fsmash;
@@ -55,4 +63,8 @@ sprite_index = disafter_nspecial;
 else if(state == states.nair && !(sprite_index == disafter_nair))
 {
 sprite_index = disafter_nair;
+}
+else if(state == states.dair && !(sprite_index == disafter_dair))
+{
+sprite_index = disafter_dair;
 }

@@ -1,5 +1,5 @@
 if(smash_released == false){
-if (bkey_down and (charge_timer <= 60)){
+if (akey_down and (charge_timer <= 60)){
 if(image_index >= 4){image_index=2; }
 
 	
