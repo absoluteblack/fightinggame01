@@ -727,6 +727,14 @@
             }
         },
         {
+            "Key": "e65e5a21-a794-4966-b80d-9d299ed01173",
+            "Value": {
+                "id": "1130d470-5d79-4c26-92b0-bd6ff6f1e73a",
+                "resourcePath": "sprites\\disafter_flinch\\disafter_flinch.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "e87e3acb-74c2-4ec4-bc98-c3e7269574f8",
             "Value": {
                 "id": "19eb1784-2805-4cc9-bd38-c038314c6451",
