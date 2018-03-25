@@ -9,10 +9,20 @@
 
 if(state == states.jumpsquat)
 {
+	//show_debug_message("Jumpsquat Ended");
 	is_grounded = false;
 	state = states.rising;
+	y -= 3;
 	air_jumps = 1;
-	if (upkey_down or xkey_down or ykey_down)//taking ykey or xkey out of here would allow them to be the designated shorthop key
+	if(dash_jump == true){
+	vsp = -(short_hop_velocity+jump_velocity)/2;
+	hsp = 1.4*max_run_speed*image_xscale;
+	x += 5*image_xscale
+	dash_jump = false;
+	//1.4*max_run_speed
+	//show_debug_message("dashjump code triggered");
+	}
+	else if (upkey_down or xkey_down or ykey_down)//taking ykey or xkey out of here would allow them to be the designated shorthop key
 	{
 		vsp = -jump_velocity;
 	}
@@ -20,10 +30,7 @@ if(state == states.jumpsquat)
 	{
 		vsp = -short_hop_velocity;
 	}
-	if(dash_jump == true){
-	hsp = 2*max_run_speed*image_xscale;
-	dash_jump = false;
-	}
+	
 }
 if (state == states.intro)
 {

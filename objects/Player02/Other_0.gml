@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-x = 775;
+x = 220;
 y = 180;
 hsp = 0;
 vsp = 0;
@@ -11,5 +11,4 @@ image_xscale = -1;
 
 if(character == "Disafter"){
 sprite_index = disafter_spawn;
-is_interruptable = false;
 }

@@ -5,9 +5,11 @@
 if (!keyboard_controls) //use gamepad controls
 {
 	
-	p1_presses = detect_gamepad_presses(slot, axislh_value, axislv_value);
-	lh_pressed = p1_presses[0];
-	lv_pressed = p1_presses[1];
+	p1_presses = detect_gamepad_presses(slot, axislh_value, axislv_value, axisrh_value, axisrv_value);
+	lh_pressed = p1_presses[1];
+	lv_pressed = p1_presses[2];
+	//rh_pressed = p1_presses[3];
+	//rv_pressed = p1_presses[4];
 	axislh_value = gamepad_axis_value(slot, gp_axislh);
 	axislv_value = gamepad_axis_value(slot, gp_axislv);
 	upkey_pressed = gamepad_axis_value(slot, gp_axislv) < -ud_press_value and lv_pressed == true;
@@ -18,6 +20,16 @@ if (!keyboard_controls) //use gamepad controls
 	rightkey_down = gamepad_axis_value(slot, gp_axislh) > deadzone;
 	downkey_pressed = gamepad_axis_value(slot, gp_axislv) > ud_press_value and lv_pressed == true;
 	downkey_down = gamepad_axis_value(slot, gp_axislv) > deadzone;
+	///////CSTICK-TEST
+	upc_pressed = gamepad_axis_value(slot, gp_axisrv) < -ud_press_value and rv_pressed == true;
+	upc_down = gamepad_axis_value(slot, gp_axisrv) < -deadzone;
+	leftc_pressed = gamepad_axis_value(slot, gp_axisrh) < -rl_press_value and rv_pressed == true;
+	leftc_down = gamepad_axis_value(slot, gp_axisrh) < -deadzone;
+	rightc_pressed = gamepad_axis_value(slot, gp_axisrh) > rl_press_value and rv_pressed == true;
+	rightc_down = gamepad_axis_value(slot, gp_axisrh) > deadzone;
+	downc_pressed = gamepad_axis_value(slot, gp_axisrv) > ud_press_value and rv_pressed == true;
+	downc_down = gamepad_axis_value(slot, gp_axisrv) > deadzone;
+	////////
 	akey_pressed = gamepad_button_check_pressed(slot, gp_face1);if(akey_pressed){show_debug_message("A: gpface1 - P1");}
 	akey_down = gamepad_button_check(slot, gp_face1);
 	bkey_pressed = gamepad_button_check_pressed(slot, gp_face3);if(bkey_pressed){show_debug_message("B: gpface3 - P1");}
@@ -50,6 +62,18 @@ else //else use only keyboard controls like a dingus
 	akey_down = keyboard_check(vk_add);
 	bkey_pressed = keyboard_check_pressed(vk_subtract);
 	bkey_down = keyboard_check(vk_subtract);
+	xkey_pressed = 0; // set these all to 0 for now because game crashes on startup if you havent set these yet and reference them in the code.
+	xkey_down = 0;
+	ykey_pressed = 0;
+	ykey_down = 0;
+	r1key_pressed = 0;
+	r2key_pressed = 0;
+	l1key_pressed = 0;
+	l2key_pressed = 0;
+	r1key_down = 0;
+	r2key_down = 0;
+	l1key_down = 0;
+	l2key_down = 0;
 }
 /////////////
 
@@ -114,17 +138,29 @@ else if (is_interruptable)
 		check_turn();
 		running_state();
 	}
+	else if (state == states.walk)
+	{
+		check_turn();
+		walking_state();
+	}
 	else if (state == states.skid)
 	{
 		//add code to prevent ability to run in other direction while state = skid
-		idle_state();
 		if (hsp == 0)
 			{
 				state = states.idle;
 			}
+		else if((sign(image_xscale) == sign(axislh_value)) || axislh_value == 0){
+		idle_state();
+		apply_friction();
+		}//end if way your facing equals way your pressing
 		else
 		{
+		//else you still skid
+		if(abs(hsp) < 1){
+			idle_state();
 			apply_friction();
+		}
 		}
 	}
 }
@@ -137,6 +173,10 @@ if (is_grounded)
 	if (state == states.running)
 	{
 		running_movement();
+	}
+	else if (state == states.walk)
+	{
+		walking_movement();
 	}
 }
 else

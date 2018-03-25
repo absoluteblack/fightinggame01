@@ -19,19 +19,18 @@ else if (rightkey_pressed)
 
 if ((leftkey_down) and image_xscale == -1)
 {
-	hsp -= (run_accel);
+	
+	hsp -= (run_accel);	
 }
-else
-{
-	if ((rightkey_down) and image_xscale == 1)
+else if ((rightkey_down) and image_xscale == 1)
 	{
 		hsp += (run_accel);
 	}
-	else
+else
 	{
 		state = states.skid;
 	}
-}
+
 
 if (abs(hsp) > max_run_speed)
 {

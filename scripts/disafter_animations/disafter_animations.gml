@@ -16,6 +16,10 @@ else if(state == states.running && !(sprite_index == disafter_running))
 {
 sprite_index = disafter_running;
 }
+else if(state == states.walk && !(sprite_index == disafter_walk))
+{
+sprite_index = disafter_walk;
+}
 else if(state == states.rising && !(sprite_index == disafter_rising))
 {
 sprite_index = disafter_rising;

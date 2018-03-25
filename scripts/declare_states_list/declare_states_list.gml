@@ -2,6 +2,7 @@
 enum states {
 idle,
 crouch,
+walk,
 running,
 dash,
 skid,

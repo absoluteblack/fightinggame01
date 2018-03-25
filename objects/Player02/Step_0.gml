@@ -1,219 +1,146 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+//deadzone and press_values set in create
 if (!keyboard_controls) //use gamepad controls
 {
-	p1_presses = detect_gamepad_presses(slot, axislh_value, axislv_value);
-	lh_pressed = p1_presses[0];
-	lv_pressed = p1_presses[1];
+	
+	p1_presses = detect_gamepad_presses(slot, axislh_value, axislv_value, axisrh_value, axisrv_value);
+	lh_pressed = p1_presses[1];
+	lv_pressed = p1_presses[2];
+	//rh_pressed = p1_presses[3];
+	//rv_pressed = p1_presses[4];
 	axislh_value = gamepad_axis_value(slot, gp_axislh);
 	axislv_value = gamepad_axis_value(slot, gp_axislv);
-	upkey_pressed = gamepad_axis_value(slot, gp_axislv) < -0.5 and lv_pressed == true;
-	upkey_down = gamepad_axis_value(slot, gp_axislv) < -0.5;
-	leftkey_pressed = gamepad_axis_value(slot, gp_axislh) < -0.5 and lv_pressed == true;
-	leftkey_down = gamepad_axis_value(slot, gp_axislh) < -0.5;
-	rightkey_pressed = gamepad_axis_value(slot, gp_axislh) > 0.5 and lv_pressed == true;
-	rightkey_down = gamepad_axis_value(slot, gp_axislh) > 0.5;
-	downkey_pressed = gamepad_axis_value(slot, gp_axislv) > 0.5 and lv_pressed == true;
-	downkey_down = gamepad_axis_value(slot, gp_axislv) > 0.5;
-	akey_pressed = gamepad_button_check_pressed(slot, gp_face1);if(akey_pressed){show_debug_message("A: gpface1 - P2");}
+	upkey_pressed = gamepad_axis_value(slot, gp_axislv) < -ud_press_value and lv_pressed == true;
+	upkey_down = gamepad_axis_value(slot, gp_axislv) < -deadzone;
+	leftkey_pressed = gamepad_axis_value(slot, gp_axislh) < -rl_press_value and lv_pressed == true;
+	leftkey_down = gamepad_axis_value(slot, gp_axislh) < -deadzone;
+	rightkey_pressed = gamepad_axis_value(slot, gp_axislh) > rl_press_value and lv_pressed == true;
+	rightkey_down = gamepad_axis_value(slot, gp_axislh) > deadzone;
+	downkey_pressed = gamepad_axis_value(slot, gp_axislv) > ud_press_value and lv_pressed == true;
+	downkey_down = gamepad_axis_value(slot, gp_axislv) > deadzone;
+	///////CSTICK-TEST
+	upc_pressed = gamepad_axis_value(slot, gp_axisrv) < -ud_press_value and rv_pressed == true;
+	upc_down = gamepad_axis_value(slot, gp_axisrv) < -deadzone;
+	leftc_pressed = gamepad_axis_value(slot, gp_axisrh) < -rl_press_value and rv_pressed == true;
+	leftc_down = gamepad_axis_value(slot, gp_axisrh) < -deadzone;
+	rightc_pressed = gamepad_axis_value(slot, gp_axisrh) > rl_press_value and rv_pressed == true;
+	rightc_down = gamepad_axis_value(slot, gp_axisrh) > deadzone;
+	downc_pressed = gamepad_axis_value(slot, gp_axisrv) > ud_press_value and rv_pressed == true;
+	downc_down = gamepad_axis_value(slot, gp_axisrv) > deadzone;
+	////////
+	akey_pressed = gamepad_button_check_pressed(slot, gp_face1);if(akey_pressed){show_debug_message("A: gpface1 - P1");}
 	akey_down = gamepad_button_check(slot, gp_face1);
-	bkey_pressed = gamepad_button_check_pressed(slot, gp_face3);if(bkey_pressed){show_debug_message("B: gpface3 - P2");}
+	bkey_pressed = gamepad_button_check_pressed(slot, gp_face3);if(bkey_pressed){show_debug_message("B: gpface3 - P1");}
 	bkey_down = gamepad_button_check(slot, gp_face3);
-	xkey_pressed = gamepad_button_check_pressed(slot, gp_face2);if(xkey_pressed){show_debug_message("X: gpface2 - P2");}
+	xkey_pressed = gamepad_button_check_pressed(slot, gp_face2);if(xkey_pressed){show_debug_message("X: gpface2 - P1");}
 	xkey_down = gamepad_button_check(slot, gp_face2); 
-	ykey_pressed = gamepad_button_check_pressed(slot, gp_face4);if(ykey_pressed){show_debug_message("Y: gpface4 - P2");}
-	ykey_down = gamepad_button_check(slot, gp_face4);
-	r1key_pressed = 0;
-	r1key_down = 0;
-	r2key_pressed = 0;
-	r2key_down = 0;
-	l1key_pressed = 0;
-	l1key_down = 0;
-	l2key_pressed = 0;
-	l2key_down = 0;
-	xkey_pressed = 0;
-xkey_down = 0;
-ykey_pressed = 0;
-ykey_down = 0;
+	ykey_pressed = gamepad_button_check_pressed(slot, gp_face4);if(ykey_pressed){show_debug_message("Y: gpface4 - P1");}
+	ykey_down = gamepad_button_check(slot, gp_face4);//gp_shoulderrb
+	r1key_pressed = gamepad_button_check_pressed(slot, gp_shoulderr); if(r1key_pressed){show_debug_message("R1: gpface1 - P1");}
+	r2key_pressed = gamepad_button_check_pressed(slot, gp_shoulderrb); if(r2key_pressed){show_debug_message("R2: gpface1 - P1");}
+	l1key_pressed = gamepad_button_check_pressed(slot, gp_shoulderl); if(l1key_pressed){show_debug_message("L1: gpface1 - P1");}
+	l2key_pressed = gamepad_button_check_pressed(slot, gp_shoulderlb); if(l2key_pressed){show_debug_message("L2: gpface1 - P1");}
+	r1key_down = gamepad_button_check(slot, gp_shoulderr);
+	r2key_down = gamepad_button_check(slot, gp_shoulderrb);
+	l1key_down = gamepad_button_check(slot, gp_shoulderl);
+	l2key_down = gamepad_button_check(slot, gp_shoulderlb);
+	 
 }
 else //else use only keyboard controls like a dingus
 {
-upkey_pressed = keyboard_check_pressed(vk_up);
-upkey_down = keyboard_check(vk_up);
-leftkey_pressed = keyboard_check_pressed(vk_left);
-leftkey_down = keyboard_check(vk_left);
-rightkey_pressed = keyboard_check_pressed(vk_right);
-rightkey_down = keyboard_check(vk_right);
-downkey_pressed = keyboard_check_pressed(vk_down);
-downkey_down = keyboard_check(vk_down);
-akey_pressed = keyboard_check_pressed(vk_add);
-akey_down = keyboard_check(vk_add);
-bkey_pressed = keyboard_check_pressed(vk_subtract);
-bkey_down = keyboard_check(vk_subtract);
-xkey_pressed = 0;
-xkey_down = 0;
-ykey_pressed = 0;
-ykey_down = 0;
-r1key_pressed = 0;
-	r1key_down = 0;
+	upkey_pressed = keyboard_check_pressed(vk_up);
+	upkey_down = keyboard_check(vk_up);
+	leftkey_pressed = keyboard_check_pressed(vk_left);
+	leftkey_down = keyboard_check(vk_left);
+	rightkey_pressed = keyboard_check_pressed(vk_right);
+	rightkey_down = keyboard_check(vk_right);
+	downkey_pressed = keyboard_check_pressed(vk_down);
+	downkey_down = keyboard_check(vk_down);
+	akey_pressed = keyboard_check_pressed(vk_add);
+	akey_down = keyboard_check(vk_add);
+	bkey_pressed = keyboard_check_pressed(vk_subtract);
+	bkey_down = keyboard_check(vk_subtract);
+	xkey_pressed = 0; // set these all to 0 for now because game crashes on startup if you havent set these yet and reference them in the code.
+	xkey_down = 0;
+	ykey_pressed = 0;
+	ykey_down = 0;
+	r1key_pressed = 0;
 	r2key_pressed = 0;
-	r2key_down = 0;
 	l1key_pressed = 0;
-	l1key_down = 0;
 	l2key_pressed = 0;
+	r1key_down = 0;
+	r2key_down = 0;
+	l1key_down = 0;
 	l2key_down = 0;
 }
+/////////////
+
+check_character_animations();
 
 
-	
-	
-if (character == "Disafter"){
-
-
-
-if (is_interruptable)
-{
-	if (sprite_index == disafter_rising and vsp > 0)
-	{
-		sprite_index = disafter_falling;
+if(hitStun >= 1){
+if(state != states.hitstun){
+	justHit = true; 
+	show_debug_message("just hit.");
+	hitStun_from_hit = hitStun;
+	show_debug_message("total hitstun = " + string(hitStun_from_hit));
 	}
-
-	if (sprite_index == disafter_idle)
-	{
-		idle_state();
-	}
-	
-	if (sprite_index == disafter_crouch)
-	{
-		crouch_state();
-	}
-	
-	if (sprite_index == disafter_jab)
-	{
-		jab_attack();
-	}
-	
-	if (sprite_index == disafter_fsmash)
-	{
-	
-		fsmash_generic();
-	}
-		if (sprite_index == disafter_dsmash)
-	{
-	
-		dsmash_generic();
-	}
-	if (sprite_index == disafter_nspecial)
-	{
-	
-		nspecial_generic();
-	}
-
-	if (sprite_index == disafter_running)
-	{
-		check_turn();
-		running_state();
-	}
-
-	if (sprite_index == disafter_skid)
-	{
-		idle_state();
-		if (hsp == 0)
-			{
-				sprite_index = disafter_idle;
-			}
-		else
-		{
-			apply_friction();
-		}
-	}
+state = states.hitstun;
+hitstun_state();
 }
-
-// Physics calc
-apply_friction();
-
-if (is_grounded)
-{
-	if (sprite_index == disafter_running)
-	{
-		running_movement();
-	}
-}
-else
-{
-	if ((sprite_index == disafter_rising) or (sprite_index == disafter_falling) or (sprite_index == disafter_jump))
-	{
-		air_movement();	
-	}
-	else if (sprite_index == disafter_nair)
-	{
-		air_attacks();	
-	}
-}
-
-vsp += grav;
-if (vsp > max_fall_speed)
-{
-	vsp = max_fall_speed;
-}
-
-
-collide_and_move();	
-	
-}//endif disafter
-
-
-
-
-if(character == "Number2"){
-	number2_animations();
-
-if (is_interruptable)
+else if (is_interruptable)
 {
 	if (state == states.rising and vsp > 0)
 	{
 		state = states.falling;
 	}
-
-	if (state == states.idle)
+	else if (state == states.idle)
 	{
 		idle_state();
 	}
-	
-	if (state == states.crouch)
+	else if (state == states.dash)
+	{
+		dash_state();
+	}
+	else if (state == states.crouch)
 	{
 		crouch_state();
 	}
-	
-	if (state == states.jab)
+	else if (state == states.shield)
+	{
+		shielding();
+	}
+	else if (state == states.jab)
 	{
 		jab_attack();
 	}
-	
-	if (state == states.fsmash)
+	else if (state == states.ftilt)
+	{
+		ftilt_attack();
+	}
+	else if (state == states.fsmash)
 	{
 	
 		fsmash_generic();
 	}
-		if (state == states.dsmash)
+    else if (state == states.dsmash)
 	{
-	
 		dsmash_generic();
 	}
-	if (state == states.nspecial)
+	else if (state == states.nspecial)
 	{
-	
 		nspecial_generic();
 	}
-
-	if (state == states.running)
+	else if (state == states.running)
 	{
 		check_turn();
 		running_state();
 	}
-
-	if (state == states.skid)
+	else if (state == states.skid)
 	{
+		//add code to prevent ability to run in other direction while state = skid
 		idle_state();
 		if (hsp == 0)
 			{
@@ -242,10 +169,11 @@ else
 	{
 		air_movement();	
 	}
-	else if (state == states.nair)
+	else if ((state == states.nair) or (state == states.dair))
 	{
 		air_attacks();	
 	}
+	
 }
 
 vsp += grav;
@@ -256,5 +184,5 @@ if (vsp > max_fall_speed)
 
 
 collide_and_move();
-number2_animations();
-}
+
+check_character_animations();

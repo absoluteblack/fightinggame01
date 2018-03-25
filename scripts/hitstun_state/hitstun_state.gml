@@ -15,7 +15,22 @@ justHit = false;
 hitStun -= 1;
 show_debug_message("p1 remaining hitstun: " + string(hitStun));
 
-if(hitStun <= 0){ state = states.idle;}
+
+if(hitStun <= 0){ 
+	if(vsp > 0){
+	state = states.falling;
+	is_grounded = false;
+	}
+	else if(vsp < 0){
+	state = states.rising; //sorry connor :(		
+	is_grounded = false;
+	}
+	else{
+	state = states.idle;
+	is_grounded = true;
+	}
+	}
+
 
 
 

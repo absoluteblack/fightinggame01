@@ -5,7 +5,7 @@ x = 220;
 y = 180;
 hsp = 0;
 vsp = 0;
-state = states.idle;
+state = states.intro;
 is_interruptable = true;
 image_xscale = 1;
 

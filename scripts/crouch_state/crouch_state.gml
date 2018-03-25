@@ -8,5 +8,12 @@ else if !(downkey_down)
 {
 	state = states.idle;
 }
+else if (upkey_pressed or xkey_pressed or ykey_pressed)
+{
+	state = states.jumpsquat;
+}
+else{
+idle_n_crouch_attacks();	
+}
 
 	

@@ -1,5 +1,5 @@
 if(smash_released == false){
-if (akey_down and (charge_timer <= 60)){
+if ((akey_down or downc_down) and (charge_timer <= 60)){
 if(image_index >= 4){image_index=2; }
 
 	
@@ -17,7 +17,7 @@ else{ //else if smash_release = true;
 	
 	if(image_index>5){
 		if(hitbox_created == false){
-	hitbox = hitbox_create(32*image_xscale, 16, 8*image_xscale, 32, 8, (charge_timer*.2)*image_xscale, (charge_timer*.4), 15); //3rd to last and 2nd to last xknockback and yknockback
+	hitbox = hitbox_create(32*image_xscale, 16, 8*image_xscale, 32, 8, (charge_timer*.2)*image_xscale, (charge_timer*.4), 30); //3rd to last and 2nd to last xknockback and yknockback
 	hitbox_created = true;
 	image_speed = 1;}
 	}

@@ -1,4 +1,4 @@
-/// @description Insert description here
+ /// @description Insert description here
 // You can write your code in this editor
 timre = 0;
 
@@ -10,12 +10,14 @@ timre = 0;
 character = "Disafter"; //later on, feed which character is selected for player02 here
 slot = 0;
 keyboard_controls = not gamepad_is_connected(slot);
-deadzone = .35;
+deadzone = .15;
 rl_press_value = .9;
 ud_press_value = .6;
 justHit = 0;
 axislh_value = 0;
 axislv_value = 0;
+axisrh_value = 0;
+axisrv_value = 0;
 
 
 
@@ -35,12 +37,13 @@ max_fall_speed = 10;
 grav = max_fall_speed/15;
 
 ground_friction = .15;
+walk_speed = 1;
 max_run_speed = 6;
-run_accel = max_run_speed/20;
-
+run_accel = max_run_speed/10;
+air_accel = run_accel *1;
 air_friction = ground_friction * 1.2;
 air_max_speed = max_run_speed;
-air_accel = run_accel / 3 + air_friction;
+
 
 is_grounded = false;
 is_interruptable = true;
