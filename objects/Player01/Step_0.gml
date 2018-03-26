@@ -6,28 +6,28 @@ if (!keyboard_controls) //use gamepad controls
 {
 	
 	p1_presses = detect_gamepad_presses(slot, axislh_value, axislv_value, axisrh_value, axisrv_value);
-	lh_pressed = p1_presses[1];
-	lv_pressed = p1_presses[2];
-	//rh_pressed = p1_presses[3];
-	//rv_pressed = p1_presses[4];
+	lh_pressed = p1_presses[0];
+	lv_pressed = p1_presses[1];
+	rh_pressed = p1_presses[2];
+	rv_pressed = p1_presses[3];
 	axislh_value = gamepad_axis_value(slot, gp_axislh);
 	axislv_value = gamepad_axis_value(slot, gp_axislv);
-	upkey_pressed = gamepad_axis_value(slot, gp_axislv) < -ud_press_value and lv_pressed == true;
+	upkey_pressed = (gamepad_axis_value(slot, gp_axislv) < -ud_press_value) and lv_pressed == true;
 	upkey_down = gamepad_axis_value(slot, gp_axislv) < -deadzone;
-	leftkey_pressed = gamepad_axis_value(slot, gp_axislh) < -rl_press_value and lv_pressed == true;
+	leftkey_pressed = (gamepad_axis_value(slot, gp_axislh) < -rl_press_value) and lh_pressed == true;
 	leftkey_down = gamepad_axis_value(slot, gp_axislh) < -deadzone;
-	rightkey_pressed = gamepad_axis_value(slot, gp_axislh) > rl_press_value and lv_pressed == true;
+	rightkey_pressed = (gamepad_axis_value(slot, gp_axislh) > rl_press_value) and lh_pressed == true;
 	rightkey_down = gamepad_axis_value(slot, gp_axislh) > deadzone;
-	downkey_pressed = gamepad_axis_value(slot, gp_axislv) > ud_press_value and lv_pressed == true;
+	downkey_pressed = (gamepad_axis_value(slot, gp_axislv) > ud_press_value) and lv_pressed == true;
 	downkey_down = gamepad_axis_value(slot, gp_axislv) > deadzone;
 	///////CSTICK-TEST
-	upc_pressed = gamepad_axis_value(slot, gp_axisrv) < -ud_press_value and rv_pressed == true;
+	upc_pressed = (gamepad_axis_value(slot, gp_axisrv) < -ud_press_value) and rv_pressed == true;
 	upc_down = gamepad_axis_value(slot, gp_axisrv) < -deadzone;
-	leftc_pressed = gamepad_axis_value(slot, gp_axisrh) < -rl_press_value and rv_pressed == true;
+	leftc_pressed = (gamepad_axis_value(slot, gp_axisrh) < -rl_press_value) and rh_pressed == true;
 	leftc_down = gamepad_axis_value(slot, gp_axisrh) < -deadzone;
-	rightc_pressed = gamepad_axis_value(slot, gp_axisrh) > rl_press_value and rv_pressed == true;
+	rightc_pressed = (gamepad_axis_value(slot, gp_axisrh) > rl_press_value) and rh_pressed == true;
 	rightc_down = gamepad_axis_value(slot, gp_axisrh) > deadzone;
-	downc_pressed = gamepad_axis_value(slot, gp_axisrv) > ud_press_value and rv_pressed == true;
+	downc_pressed = (gamepad_axis_value(slot, gp_axisrv) > ud_press_value)and rv_pressed == true;
 	downc_down = gamepad_axis_value(slot, gp_axisrv) > deadzone;
 	////////
 	akey_pressed = gamepad_button_check_pressed(slot, gp_face1);if(akey_pressed){show_debug_message("A: gpface1 - P1");}
@@ -132,6 +132,10 @@ else if (is_interruptable)
 	else if (state == states.nspecial)
 	{
 		nspecial_generic();
+	}
+	else if (state == states.uspecial)
+	{
+		uspecial_generic();
 	}
 	else if (state == states.running)
 	{

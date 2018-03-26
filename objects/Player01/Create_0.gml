@@ -34,7 +34,8 @@ dash_frames = 0; //remaining frames left of dash animation
 dash_length = 15; //how many frames their dash lasts
 dash_jump = false;
 max_fall_speed = 10;
-grav = max_fall_speed/15;
+initial_grav = max_fall_speed/15; //declaring what initial grav should be, so we can alter gravity and then know what to set it back to
+grav = initial_grav;
 
 ground_friction = .15;
 walk_speed = 1;

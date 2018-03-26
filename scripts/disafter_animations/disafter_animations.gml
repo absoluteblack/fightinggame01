@@ -64,6 +64,10 @@ else if(state == states.nspecial && !(sprite_index == disafter_nspecial))
 {
 sprite_index = disafter_nspecial;
 }
+else if(state == states.uspecial && !(sprite_index == disafter_uspecial))
+{
+sprite_index = disafter_uspecial;
+}
 else if(state == states.nair && !(sprite_index == disafter_nair))
 {
 sprite_index = disafter_nair;

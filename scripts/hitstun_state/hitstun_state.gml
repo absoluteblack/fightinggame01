@@ -1,4 +1,4 @@
-
+grav = initial_grav;
 if(justHit){
 	image_index=0;
 }

@@ -27,7 +27,8 @@
         "c68b014c-2fe2-4bd1-9812-82e513790e03",
         "309f0575-d079-48e3-9072-41a29ad145b9",
         "dc8cb8ed-b811-47b2-a764-3b1435927323",
-        "ac555773-f1db-4d3a-a8b9-76d34fd6c6e5"
+        "ac555773-f1db-4d3a-a8b9-76d34fd6c6e5",
+        "73c7bd19-5fa4-4b45-854a-3b348cbf2335"
     ],
     "filterType": "GMSprite",
     "folderName": "disafter",

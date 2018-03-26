@@ -14,7 +14,7 @@
         "300298dd-242b-4afa-bd7d-f15d892fe77d"
     ],
     "filterType": "GMScript",
-    "folderName": "physics_calculations",
+    "folderName": "movement_calculations",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

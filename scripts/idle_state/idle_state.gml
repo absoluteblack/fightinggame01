@@ -2,8 +2,7 @@ if (upkey_pressed or xkey_pressed or ykey_pressed)
 {
 	state = states.jumpsquat;
 }
-	
-if (leftkey_pressed)
+else if (leftkey_pressed)
 {
 	//state = states.running;
 	state = states.dash;
@@ -37,13 +36,11 @@ else if (rightkey_down)
 	}
 	image_xscale = 1;
 }
-
-if (downkey_down)
+else if (downkey_down)
 {
 	state = states.crouch;
 }
-
-if (r2key_down or l2key_down) //doing pressed instead of down because will check for down each frame in shield script 
+else if (r2key_down or l2key_down) //doing pressed instead of down because will check for down each frame in shield script 
 {
 	state = states.shield;
 }

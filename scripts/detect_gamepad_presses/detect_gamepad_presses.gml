@@ -5,12 +5,12 @@ _gp_axisrh = argument3;
 _gp_axisrv = argument4;
 axislh = gamepad_axis_value(_slot, gp_axislh);
 axislv = gamepad_axis_value(_slot, gp_axislv);
-lh_pressed = true;
-lv_pressed = true;
+_lh_pressed = true;
+_lv_pressed = true;
 axisrh = gamepad_axis_value(_slot, gp_axisrh);
 axisrv = gamepad_axis_value(_slot, gp_axisrv);
-rh_pressed = true;
-rv_pressed = true;
+_rh_pressed = true;
+_rv_pressed = true;
 
 
 if abs(axislh) > deadzone and abs(_gp_axislh) > deadzone and sign(axislh) == sign(_gp_axislh)
@@ -32,4 +32,4 @@ if abs(axisrv) > deadzone and abs(_gp_axisrv) > deadzone and sign(axisrv) == sig
 }
 
 
-return [lh_pressed, lv_pressed, rh_pressed, rv_pressed];
+return [_lh_pressed, _lv_pressed, _rh_pressed, _rv_pressed];
