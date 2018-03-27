@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-x = 220;
+x = 500;
 y = 180;
 hsp = 0;
 vsp = 0;
