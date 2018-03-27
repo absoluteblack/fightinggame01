@@ -43,9 +43,9 @@ else if ((bkey_pressed)){
 		if(leftkey_down){ image_xscale = -1;}else if(rightkey_down){ image_xscale = 1;}
 		if(character == "Disafter"){
 			move_timer = 0;
-			temp_grav = 0;
+			//temp_grav = 0;
 			air_jumps = 0;
-			grav = temp_grav;
+			//grav = temp_grav;
 			vsp = 0;
 		//hitbox = hitbox_create(45*image_xscale, 45, -20*image_xscale, 40, 8, 0*image_xscale, 10, 30); //the are xknockback and yknockback
 		//audio_play_sound(2,1,0);

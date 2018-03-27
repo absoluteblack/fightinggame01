@@ -13,6 +13,7 @@ else if(move_timer > 20){ //frame the animation ends on
 	hsp = (move_timer/4)*image_xscale;
 }
 else{
+vsp = 0;
 image_index = 0;
 }
 
