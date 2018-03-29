@@ -10,7 +10,7 @@ vsp = 0;
 else{
 if(keyboard_check_pressed(ord("C"))){
 x = 480;
-y = 360;
+y = 200;
 }
 
 if(state == states.running){

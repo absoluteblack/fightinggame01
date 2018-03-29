@@ -21,6 +21,7 @@ axisrv_value = 0;
 
 
 
+
 state = states.idle;
 
 vsp = 0;
@@ -58,3 +59,44 @@ hitBy = -1;
 hitStun = 0;
 hitStun_from_hit = 0;
 hit = false;
+
+
+
+	lh_pressed = 0;
+	lv_pressed = 0;
+	rh_pressed = 0;
+	rv_pressed = 0;
+	axislh_value = 0;
+	axislv_value = 0;
+	upkey_pressed = 0;
+	upkey_down = 0;
+	leftkey_pressed = 0;
+	leftkey_down = 0;
+	rightkey_pressed = 0;
+	rightkey_down = 0;
+	downkey_pressed = 0;
+	downkey_down = 0;
+	upc_pressed = 0;
+	upc_down = 0;
+	leftc_pressed = 0;
+	leftc_down = 0;
+	rightc_pressed = 0;
+	rightc_down = 0;
+	downc_pressed = 0;
+	downc_down = 0;
+	akey_pressed = 0;
+	akey_down = 0;
+	bkey_pressed = 0;
+	bkey_down = 0;
+	xkey_pressed = 0;
+	xkey_down = 0;
+	ykey_pressed = 0;
+	ykey_down = 0;
+	r1key_pressed = 0;
+	r2key_pressed = 0;
+	l1key_pressed = 0;
+	l2key_pressed = 0;
+	r1key_down = 0;
+	r2key_down = 0;
+	l1key_down = 0;
+	l2key_down = 0;
